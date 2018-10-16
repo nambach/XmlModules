@@ -20,9 +20,9 @@
       <xs:element type="xs:string" name="incrementParam"/>
       <xs:element type="xs:string" name="incrementFrom"/>
       <xs:element type="xs:string" name="incrementTo"/>
-      <xs:element type="xs:string" name="collectionJsQuerySelector"/>
+      <xs:element type="xs:string" name="fragmentJsQuerySelector"/>
+      <xs:element type="xs:string" name="fragmentXpath"/>
       <xs:element type="xs:string" name="collectionXpath"/>
-      <xs:element type="xs:string" name="itemXpath"/>
       <xs:element type="item" name="item"/>
     </xs:sequence>
   </xs:complexType>

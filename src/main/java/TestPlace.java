@@ -1,3 +1,4 @@
+import crawler.Crawler;
 import entity.rawbook.RawBookParser;
 import utils.FileUtils;
 import utils.StAXUtils;
@@ -7,7 +8,8 @@ import java.util.Map;
 
 public class TestPlace {
     public static void main( String args[] ) {
-        testParser();
+        Crawler crawler = new Crawler(FileUtils.getFilePath("crawlRules/book-rule.xml"));
+        crawler.crawl();
     }
 
     public static void testParser() {

@@ -1,10 +1,7 @@
 
 package model.crawling;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
@@ -23,9 +20,9 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="incrementParam" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="incrementFrom" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="incrementTo" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="collectionJsQuerySelector" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="fragmentJsQuerySelector" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="fragmentXpath" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="collectionXpath" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="itemXpath" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="item" type="{http://nambm.io/crawling-rule}item"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -43,9 +40,9 @@ import javax.xml.bind.annotation.XmlType;
     "incrementParam",
     "incrementFrom",
     "incrementTo",
-    "collectionJsQuerySelector",
+    "fragmentJsQuerySelector",
+    "fragmentXpath",
     "collectionXpath",
-    "itemXpath",
     "item"
 })
 public class Rule {
@@ -63,11 +60,11 @@ public class Rule {
     @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
     protected String incrementTo;
     @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
-    protected String collectionJsQuerySelector;
+    protected String fragmentJsQuerySelector;
+    @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
+    protected String fragmentXpath;
     @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
     protected String collectionXpath;
-    @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
-    protected String itemXpath;
     @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
     protected Item item;
 
@@ -216,27 +213,51 @@ public class Rule {
     }
 
     /**
-     * Gets the value of the collectionJsQuerySelector property.
+     * Gets the value of the fragmentJsQuerySelector property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getCollectionJsQuerySelector() {
-        return collectionJsQuerySelector;
+    public String getFragmentJsQuerySelector() {
+        return fragmentJsQuerySelector;
     }
 
     /**
-     * Sets the value of the collectionJsQuerySelector property.
+     * Sets the value of the fragmentJsQuerySelector property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setCollectionJsQuerySelector(String value) {
-        this.collectionJsQuerySelector = value;
+    public void setFragmentJsQuerySelector(String value) {
+        this.fragmentJsQuerySelector = value;
+    }
+
+    /**
+     * Gets the value of the fragmentXpath property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFragmentXpath() {
+        return fragmentXpath;
+    }
+
+    /**
+     * Sets the value of the fragmentXpath property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFragmentXpath(String value) {
+        this.fragmentXpath = value;
     }
 
     /**
@@ -261,30 +282,6 @@ public class Rule {
      */
     public void setCollectionXpath(String value) {
         this.collectionXpath = value;
-    }
-
-    /**
-     * Gets the value of the itemXpath property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getItemXpath() {
-        return itemXpath;
-    }
-
-    /**
-     * Sets the value of the itemXpath property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setItemXpath(String value) {
-        this.itemXpath = value;
     }
 
     /**

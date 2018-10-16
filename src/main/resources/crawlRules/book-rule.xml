@@ -9,9 +9,9 @@
         <incrementParam>?page={i}</incrementParam>
         <incrementFrom>1</incrementFrom>
         <incrementTo>2</incrementTo>
-        <collectionJsQuerySelector> </collectionJsQuerySelector>
-        <collectionXpath>//table[contains(@class, "template-products")]</collectionXpath>
-        <itemXpath>*//td[contains(@class, "compact")]</itemXpath>
+        <fragmentJsQuerySelector> </fragmentJsQuerySelector>
+        <fragmentXpath>//table[contains(@class, "template-products")]</fragmentXpath>
+        <collectionXpath>*//td[contains(@class, "compact")]</collectionXpath>
         <item>
             <detailXpath detailName="title">*//a[contains(@class, "product-title")]/text()</detailXpath>
             <detailXpath detailName="link">*//a[contains(@class, "product-title")]/@href</detailXpath>
