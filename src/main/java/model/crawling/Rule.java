@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for pageType complex type.
+ * <p>Java class for rule complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="pageType">
+ * &lt;complexType name="rule">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="collectionJsQuerySelector" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="collectionXpath" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="itemXpath" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="item" type="{http://nambm.io/crawling-rule}itemType"/>
+ *         &lt;element name="item" type="{http://nambm.io/crawling-rule}item"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "pageType", namespace = "http://nambm.io/crawling-rule", propOrder = {
+@XmlType(name = "rule", namespace = "http://nambm.io/crawling-rule", propOrder = {
     "name",
     "url",
     "basedUrl",
@@ -48,7 +48,7 @@ import javax.xml.bind.annotation.XmlType;
     "itemXpath",
     "item"
 })
-public class PageType {
+public class Rule {
 
     @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
     protected String name;
@@ -69,7 +69,7 @@ public class PageType {
     @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
     protected String itemXpath;
     @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
-    protected ItemType item;
+    protected Item item;
 
     /**
      * Gets the value of the name property.
@@ -292,10 +292,10 @@ public class PageType {
      * 
      * @return
      *     possible object is
-     *     {@link ItemType }
+     *     {@link Item }
      *     
      */
-    public ItemType getItem() {
+    public Item getItem() {
         return item;
     }
 
@@ -304,10 +304,10 @@ public class PageType {
      * 
      * @param value
      *     allowed object is
-     *     {@link ItemType }
+     *     {@link Item }
      *     
      */
-    public void setItem(ItemType value) {
+    public void setItem(Item value) {
         this.item = value;
     }
 

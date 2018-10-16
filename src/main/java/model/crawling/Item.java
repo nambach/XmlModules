@@ -10,16 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for itemType complex type.
+ * <p>Java class for item complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="itemType">
+ * &lt;complexType name="item">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="detailXpath" type="{http://nambm.io/crawling-rule}itemDetailType" maxOccurs="unbounded"/>
+ *         &lt;element name="detailXpath" type="{http://nambm.io/crawling-rule}itemDetail" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,13 +29,13 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "itemType", namespace = "http://nambm.io/crawling-rule", propOrder = {
+@XmlType(name = "item", namespace = "http://nambm.io/crawling-rule", propOrder = {
     "detailXpath"
 })
-public class ItemType {
+public class Item {
 
     @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
-    protected List<ItemDetailType> detailXpath;
+    protected List<ItemDetail> detailXpath;
 
     /**
      * Gets the value of the detailXpath property.
@@ -55,13 +55,13 @@ public class ItemType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ItemDetailType }
+     * {@link ItemDetail }
      * 
      * 
      */
-    public List<ItemDetailType> getDetailXpath() {
+    public List<ItemDetail> getDetailXpath() {
         if (detailXpath == null) {
-            detailXpath = new ArrayList<ItemDetailType>();
+            detailXpath = new ArrayList<ItemDetail>();
         }
         return this.detailXpath;
     }

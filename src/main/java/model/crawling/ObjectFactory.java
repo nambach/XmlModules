@@ -24,7 +24,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Pages_QNAME = new QName("http://nambm.io/crawling-rule", "pages");
+    private final static QName _Rules_QNAME = new QName("http://nambm.io/crawling-rule", "rules");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: model.crawling
@@ -34,44 +34,44 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PagesType }
+     * Create an instance of {@link Rules }
      * 
      */
-    public PagesType createPagesType() {
-        return new PagesType();
+    public Rules createRules() {
+        return new Rules();
     }
 
     /**
-     * Create an instance of {@link ItemType }
+     * Create an instance of {@link Item }
      * 
      */
-    public ItemType createItemType() {
-        return new ItemType();
+    public Item createItem() {
+        return new Item();
     }
 
     /**
-     * Create an instance of {@link PageType }
+     * Create an instance of {@link Rule }
      * 
      */
-    public PageType createPageType() {
-        return new PageType();
+    public Rule createRule() {
+        return new Rule();
     }
 
     /**
-     * Create an instance of {@link ItemDetailType }
+     * Create an instance of {@link ItemDetail }
      * 
      */
-    public ItemDetailType createItemDetailType() {
-        return new ItemDetailType();
+    public ItemDetail createItemDetail() {
+        return new ItemDetail();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PagesType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Rules }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://nambm.io/crawling-rule", name = "pages")
-    public JAXBElement<PagesType> createPages(PagesType value) {
-        return new JAXBElement<PagesType>(_Pages_QNAME, PagesType.class, null, value);
+    @XmlElementDecl(namespace = "http://nambm.io/crawling-rule", name = "rules")
+    public JAXBElement<Rules> createRules(Rules value) {
+        return new JAXBElement<Rules>(_Rules_QNAME, Rules.class, null, value);
     }
 
 }

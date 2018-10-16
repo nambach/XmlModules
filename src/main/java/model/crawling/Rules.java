@@ -7,16 +7,16 @@ import java.util.List;
 
 
 /**
- * <p>Java class for pagesType complex type.
+ * <p>Java class for rules complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="pagesType">
+ * &lt;complexType name="rules">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="page" type="{http://nambm.io/crawling-rule}pageType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="rule" type="{http://nambm.io/crawling-rule}rule" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -26,42 +26,42 @@ import java.util.List;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "pagesType", namespace = "http://nambm.io/crawling-rule", propOrder = {
-    "page"
+@XmlType(name = "rules", namespace = "http://nambm.io/crawling-rule", propOrder = {
+    "rule"
 })
-@XmlRootElement(name = "pages")
-public class PagesType {
+@XmlRootElement(name = "rules")
+public class Rules {
 
     @XmlElement(namespace = "http://nambm.io/crawling-rule")
-    protected List<PageType> page;
+    protected List<Rule> rule;
 
     /**
-     * Gets the value of the page property.
+     * Gets the value of the rule property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the page property.
+     * This is why there is not a <CODE>set</CODE> method for the rule property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getPage().add(newItem);
+     *    getRule().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link PageType }
+     * {@link Rule }
      * 
      * 
      */
-    public List<PageType> getPage() {
-        if (page == null) {
-            page = new ArrayList<PageType>();
+    public List<Rule> getRule() {
+        if (rule == null) {
+            rule = new ArrayList<Rule>();
         }
-        return this.page;
+        return this.rule;
     }
 
 }
