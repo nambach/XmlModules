@@ -92,6 +92,10 @@ public class Crawler {
                         String name = detailRule.getDetailName();
                         String value = DomUtils.evaluateNode(item, detailRule.getValue(), String.class);
 
+                        if (detailRule.isIsRelativeURL()) {
+                            value = rule.getBasedUrl() + value;
+                        }
+
                         obj.put(name, value);
                     }
 

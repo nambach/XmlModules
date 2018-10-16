@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;simpleContent>
  *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
  *       &lt;attribute name="detailName" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="isRelativeURL" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
  *     &lt;/extension>
  *   &lt;/simpleContent>
  * &lt;/complexType>
@@ -35,6 +36,8 @@ public class ItemDetail {
     protected String value;
     @XmlAttribute(name = "detailName")
     protected String detailName;
+    @XmlAttribute(name = "isRelativeURL")
+    protected Boolean isRelativeURL;
 
     /**
      * Gets the value of the value property.
@@ -82,6 +85,34 @@ public class ItemDetail {
      */
     public void setDetailName(String value) {
         this.detailName = value;
+    }
+
+    /**
+     * Gets the value of the isRelativeURL property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public boolean isIsRelativeURL() {
+        if (isRelativeURL == null) {
+            return false;
+        } else {
+            return isRelativeURL;
+        }
+    }
+
+    /**
+     * Sets the value of the isRelativeURL property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setIsRelativeURL(Boolean value) {
+        this.isRelativeURL = value;
     }
 
 }
