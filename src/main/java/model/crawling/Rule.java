@@ -1,7 +1,10 @@
 
 package model.crawling;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -33,7 +36,7 @@ import javax.xml.bind.annotation.*;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "rule", namespace = "http://nambm.io/crawling-rule", propOrder = {
+@XmlType(name = "rule", propOrder = {
     "name",
     "url",
     "basedUrl",
@@ -47,25 +50,25 @@ import javax.xml.bind.annotation.*;
 })
 public class Rule {
 
-    @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
+    @XmlElement(required = true)
     protected String name;
-    @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
+    @XmlElement(required = true)
     protected String url;
-    @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
+    @XmlElement(required = true)
     protected String basedUrl;
-    @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
+    @XmlElement(required = true)
     protected String incrementParam;
-    @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
+    @XmlElement(required = true)
     protected String incrementFrom;
-    @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
+    @XmlElement(required = true)
     protected String incrementTo;
-    @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
+    @XmlElement(required = true)
     protected String fragmentJsQuerySelector;
-    @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
+    @XmlElement(required = true)
     protected String fragmentXpath;
-    @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
+    @XmlElement(required = true)
     protected String collectionXpath;
-    @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
+    @XmlElement(required = true)
     protected Item item;
 
     /**

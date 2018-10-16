@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "itemDetail", namespace = "http://nambm.io/crawling-rule", propOrder = {
+@XmlType(name = "itemDetail", propOrder = {
     "value"
 })
 public class ItemDetail {

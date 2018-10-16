@@ -1,7 +1,10 @@
 
 package model.crawling;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,13 +29,12 @@ import java.util.List;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "rules", namespace = "http://nambm.io/crawling-rule", propOrder = {
+@XmlType(name = "rules", propOrder = {
     "rule"
 })
 @XmlRootElement(name = "rules")
 public class Rules {
 
-    @XmlElement(namespace = "http://nambm.io/crawling-rule")
     protected List<Rule> rule;
 
     /**

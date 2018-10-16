@@ -22,4 +22,25 @@
             <detailXpath detailName="status">*//span[contains(@class, "qty-out-of-stock")]/text()</detailXpath>
         </item>
     </rule>
+
+    <rule>
+        <name>Kho Sách Giảm Giá</name>
+        <url>https://pibook.vn/sach-pibook-khuyen-doc</url>
+        <basedUrl>https://pibook.vn/</basedUrl>
+        <incrementParam>?page={i}</incrementParam>
+        <incrementFrom>1</incrementFrom>
+        <incrementTo>2</incrementTo>
+        <fragmentJsQuerySelector>div.dmslider</fragmentJsQuerySelector>
+        <fragmentXpath>//div[contains(@class, "dmslider")]</fragmentXpath>
+        <collectionXpath>*//li</collectionXpath>
+        <item>
+            <detailXpath detailName="title">div[contains(@class, "list1a1")]/a/text()</detailXpath>
+            <detailXpath detailName="link">div[contains(@class, "list1a1")]/a/@href</detailXpath>
+            <detailXpath detailName="image">div[contains(@class, "list1img")]//img/@data-original</detailXpath>
+            <detailXpath detailName="author">x/text()</detailXpath>
+            <detailXpath detailName="oldPrice">div[contains(@class, "priceold")]/text()</detailXpath>
+            <detailXpath detailName="price">div[contains(@class, "price1")]/text()</detailXpath>
+            <detailXpath detailName="status">x/text()</detailXpath>
+        </item>
+    </rule>
 </rules>

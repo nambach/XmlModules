@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "item", namespace = "http://nambm.io/crawling-rule", propOrder = {
+@XmlType(name = "item", propOrder = {
     "detailXpath"
 })
 public class Item {
 
-    @XmlElement(namespace = "http://nambm.io/crawling-rule", required = true)
+    @XmlElement(required = true)
     protected List<ItemDetail> detailXpath;
 
     /**
