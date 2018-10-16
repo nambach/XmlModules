@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+           targetNamespace="http://nambm.io/crawling-rule"
+           xmlns="http://nambm.io/crawling-rule"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="pages" type="pagesType"/>
+
+  <xs:complexType name="pagesType">
+    <xs:sequence>
+      <xs:element type="pageType" name="page" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pageType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="xs:string" name="url"/>
+      <xs:element type="xs:string" name="basedUrl"/>
+      <xs:element type="xs:string" name="incrementParam"/>
+      <xs:element type="xs:string" name="incrementFrom"/>
+      <xs:element type="xs:string" name="incrementTo"/>
+      <xs:element type="xs:string" name="collectionJsQuerySelector"/>
+      <xs:element type="xs:string" name="collectionXpath"/>
+      <xs:element type="xs:string" name="itemXpath"/>
+      <xs:element type="itemType" name="item"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="itemType">
+    <xs:sequence>
+      <xs:element type="itemDetailType" name="detailXpath" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="itemDetailType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="detailName" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>

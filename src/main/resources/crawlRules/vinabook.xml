@@ -1,0 +1,61 @@
+<pages>
+    <page>
+        <name>Sách vừa phát hành trong tuần</name>
+        <url>https://www.vinabook.com/sach-moi-phat-hanh</url>
+        <incrementParam>?page={i}</incrementParam>
+        <incrementFrom>1</incrementFrom>
+        <incrementTo>1</incrementTo>
+        <booklist>//table[contains(@class, "template-products")]</booklist>
+        <booklistJsQuerySelector>table.template-products</booklistJsQuerySelector>
+        <book>
+            <entity>*//td[contains(@class, "compact")]</entity>
+            <title>*//a[contains(@class, "product-title")]/text()</title>
+            <link>*//a[contains(@class, "product-title")]/@href</link>
+            <image>*//a[contains(@class, "image-border")]//img/@data-src</image>
+            <author>*//span[contains(@class, "author")]/text()</author>
+            <oldPrice>*//div[contains(@class, "price-wrap")]//span[contains(@class, "list-price")]/text()</oldPrice>
+            <price>*//div[contains(@class, "price-wrap")]//span[contains(@class, "price-num")]/text()</price>
+            <status>*//span[contains(@class, "qty-out-of-stock")]/text()</status>
+        </book>
+    </page>
+
+    <page>
+        <name>Kho Sách Giảm Giá</name>
+        <url>https://www.vinabook.com/kho-sach-giam-gia</url>
+        <incrementParam>?page={i}</incrementParam>
+        <incrementFrom>1</incrementFrom>
+        <incrementTo>1</incrementTo>
+        <booklist>//table[contains(@class, "template-products")]</booklist>
+        <booklistJsQuerySelector>table.template-products</booklistJsQuerySelector>
+        <book>
+            <entity>*//td[contains(@class, "compact")]</entity>
+            <title>*//a[contains(@class, "product-title")]/text()</title>
+            <link>*//a[contains(@class, "product-title")]/@href</link>
+            <image>*//a[contains(@class, "image-border")]//img/@data-src</image>
+            <author>*//span[contains(@class, "author")]/text()</author>
+            <oldPrice>*//div[contains(@class, "price-wrap")]//span[contains(@class, "list-price")]/text()</oldPrice>
+            <price>*//div[contains(@class, "price-wrap")]//span[contains(@class, "price-num")]/text()</price>
+            <status>*//span[contains(@class, "qty-out-of-stock")]/text()</status>
+        </book>
+    </page>
+
+    <page>
+        <name>Kho Sách Giảm Giá</name>
+        <url>https://pibook.vn/sach-pibook-khuyen-doc</url>
+        <incrementParam>?page={i}</incrementParam>
+        <incrementFrom>1</incrementFrom>
+        <incrementTo>1</incrementTo>
+        <booklist>//div[contains(@class, "dmslider")]</booklist>
+        <booklistJsQuerySelector>div.dmslider</booklistJsQuerySelector>
+        <book>
+            <entity>*//li</entity>
+            <title>div[contains(@class, "list1a1")]/a/text()</title>
+            <link>div[contains(@class, "list1a1")]/a/@href</link>
+            <image>div[contains(@class, "list1img")]//img/@data-original</image>
+            <author>x/text()</author>
+            <oldPrice>div[contains(@class, "priceold")]/text()</oldPrice>
+            <price>div[contains(@class, "price1")]/text()</price>
+            <status>x/text()</status>
+        </book>
+    </page>
+</pages>

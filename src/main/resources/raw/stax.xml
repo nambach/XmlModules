@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <book id="1">
+        <title id="12" s="s">The Firm</title>
+        <author>John Grisham</author>
+        <price>99</price>
+        <img id="aaa"/>
+    </book>
+    <book id="13">
+        <title>Coma</title>
+        <author>Robin Cook</author>
+        <price>99.5</price>
+    </book>
+    <book id="5">
+        <title>Wild Horses</title>
+        <author>Rebecca Moore</author>
+        <price>35.5</price>
+    </book>
+</library>

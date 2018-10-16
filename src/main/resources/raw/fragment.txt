@@ -1,0 +1,440 @@
+<div class="mainbox-body">
+    
+
+	
+
+		                		
+	
+		<table class="fixed-layout multicolumns-list template-grid-list table-width">
+					<tbody><tr>
+									
+																		    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<td class="product-spacer">&nbsp;</td>
+						<td class="compact" style="width: 20%">    
+														    <form action="https://www.vinabook.com/" method="post" name="product_form_22300084830" enctype="multipart/form-data" class="cm-disable-empty-files   cm-processed-form">
+<input name="result_ids" value="cart_status*,wish_list*,checkout*,account_info*" type="hidden">
+    <input name="redirect_url" value="index.php" type="hidden">
+<input name="product_data[84830][product_id]" value="84830" type="hidden">
+
+							
+							<div class="product_thumb">
+								<a title="Làm Điều Quan Trọng" class="image-border" href="https://www.vinabook.com/lam-dieu-quan-trong-p84830.html">
+																														<span class="thumb-discount-label thumb-discount-label_is_inside">-20%</span>
+																												<img class="   pict lazy-img" src="https://www.vinabook.com/images/thumbnails/product/115x/316703_lam-dieu-quan-trong.jpg" data-src="https://www.vinabook.com/images/thumbnails/product/115x/316703_lam-dieu-quan-trong.jpg" alt="Làm Điều Quan Trọng" title="Làm Điều Quan Trọng" style="opacity: 1;"><noscript><img src="https://www.vinabook.com/images/thumbnails/product/115x/316703_lam-dieu-quan-trong.jpg"/></noscript>
+																			<span class="vnb-bg look-inside-cover-small">&nbsp;</span>
+																	</a>
+							</div>
+
+							<p class="price-info-nd">
+																            <a href="                            https://www.vinabook.com/lam-dieu-quan-trong-p84830.html
+                        " class="product-title" title="Làm Điều Quan Trọng">                    Làm Điều Quan Trọng
+            </a>    
+																									<span class="author">John Doerr</span>
+															</p>
+
+							<div class="price-wrap">
+																                        <span class="cm-reload-22300084830 old_price_update" id="old_price_update_22300084830">
+                <input name="appearance[show_price_values]" value="1" type="hidden">
+                <input name="appearance[show_old_price]" value="1" type="hidden">
+                                    <span class="list-price" id="line_list_price_22300084830"><span class="strike"><span id="sec_list_price_22300084830" class="list-price nowrap">154.000</span>&nbsp;<span class="list-price nowrap">₫</span></span></span>
+                            </span>
+            &nbsp;
+																    <span class="cm-reload-22300084830 price-update" id="price_update_22300084830">
+        <input name="appearance[show_price_values]" value="1" type="hidden">
+        <input name="appearance[show_price]" value="1" type="hidden">
+                                    
+                                    						<span class="price" id="line_discounted_price_22300084830"> <span id="sec_discounted_price_22300084830" class="price-num">123.000</span>&nbsp;<span class="price-num">₫</span></span>
+                                                    
+
+                            <!--price_update_22300084830--></span>
+
+
+																    
+							</div>
+
+														
+
+							
+
+														</form>
+    
+						</td>
+						<td class="product-spacer">&nbsp;</td>
+														
+																		    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<td class="product-spacer">&nbsp;</td>
+						<td class="compact" style="width: 20%">    
+														    <form action="https://www.vinabook.com/" method="post" name="product_form_22300084882" enctype="multipart/form-data" class="cm-disable-empty-files   cm-processed-form">
+<input name="result_ids" value="cart_status*,wish_list*,checkout*,account_info*" type="hidden">
+    <input name="redirect_url" value="index.php" type="hidden">
+<input name="product_data[84882][product_id]" value="84882" type="hidden">
+
+							
+							<div class="product_thumb">
+								<a title="Thiết Lập Internet Vạn Vật Trong Doanh Nghiệp" class="image-border" href="https://www.vinabook.com/thiet-lap-internet-van-vat-trong-doanh-nghiep-p84882.html">
+																														<span class="thumb-discount-label thumb-discount-label_is_inside">-20%</span>
+																												<img class="   pict lazy-img" src="https://www.vinabook.com/images/thumbnails/product/115x/317091_thiet-lap-internet-van-vat-trong-doanh-nghiep.jpg" data-src="https://www.vinabook.com/images/thumbnails/product/115x/317091_thiet-lap-internet-van-vat-trong-doanh-nghiep.jpg" alt="Thiết Lập Internet Vạn Vật Trong Doanh Nghiệp" title="Thiết Lập Internet Vạn Vật Trong Doanh Nghiệp" style="opacity: 1;"><noscript><img src="https://www.vinabook.com/images/thumbnails/product/115x/317091_thiet-lap-internet-van-vat-trong-doanh-nghiep.jpg"/></noscript>
+																			<span class="vnb-bg look-inside-cover-small">&nbsp;</span>
+																	</a>
+							</div>
+
+							<p class="price-info-nd">
+																            <a href="                            https://www.vinabook.com/thiet-lap-internet-van-vat-trong-doanh-nghiep-p84882.html
+                        " class="product-title" title="Thiết Lập Internet Vạn Vật Trong Doanh Nghiệp">                    Thiết Lập Internet Vạn Vật Trong Doanh Nghiệp
+            </a>    
+																									<span class="author">Maciej Kranz</span>
+															</p>
+
+							<div class="price-wrap">
+																                        <span class="cm-reload-22300084882 old_price_update" id="old_price_update_22300084882">
+                <input name="appearance[show_price_values]" value="1" type="hidden">
+                <input name="appearance[show_old_price]" value="1" type="hidden">
+                                    <span class="list-price" id="line_list_price_22300084882"><span class="strike"><span id="sec_list_price_22300084882" class="list-price nowrap">199.000</span>&nbsp;<span class="list-price nowrap">₫</span></span></span>
+                            </span>
+            &nbsp;
+																    <span class="cm-reload-22300084882 price-update" id="price_update_22300084882">
+        <input name="appearance[show_price_values]" value="1" type="hidden">
+        <input name="appearance[show_price]" value="1" type="hidden">
+                                    
+                                    						<span class="price" id="line_discounted_price_22300084882"> <span id="sec_discounted_price_22300084882" class="price-num">159.000</span>&nbsp;<span class="price-num">₫</span></span>
+                                                    
+
+                            <!--price_update_22300084882--></span>
+
+
+																    
+							</div>
+
+														
+
+							
+
+														</form>
+    
+						</td>
+						<td class="product-spacer">&nbsp;</td>
+														
+																		    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<td class="product-spacer">&nbsp;</td>
+						<td class="compact" style="width: 20%">    
+														    <form action="https://www.vinabook.com/" method="post" name="product_form_22300084884" enctype="multipart/form-data" class="cm-disable-empty-files   cm-processed-form">
+<input name="result_ids" value="cart_status*,wish_list*,checkout*,account_info*" type="hidden">
+    <input name="redirect_url" value="index.php" type="hidden">
+<input name="product_data[84884][product_id]" value="84884" type="hidden">
+
+							
+							<div class="product_thumb">
+								<a title="Nghệ Thuật Nắm Bắt Cơ Hội Tăng Trưởng" class="image-border" href="https://www.vinabook.com/nghe-thuat-nam-bat-co-hoi-tang-truong-p84884.html">
+																														<span class="thumb-discount-label thumb-discount-label_is_inside">-20%</span>
+																												<img class="   pict lazy-img" src="https://www.vinabook.com/images/thumbnails/product/115x/317092_nghe-thuat-nam-bat-co-hoi-tang-truong.jpg" data-src="https://www.vinabook.com/images/thumbnails/product/115x/317092_nghe-thuat-nam-bat-co-hoi-tang-truong.jpg" alt="Nghệ Thuật Nắm Bắt Cơ Hội Tăng Trưởng" title="Nghệ Thuật Nắm Bắt Cơ Hội Tăng Trưởng" style="opacity: 1;"><noscript><img src="https://www.vinabook.com/images/thumbnails/product/115x/317092_nghe-thuat-nam-bat-co-hoi-tang-truong.jpg"/></noscript>
+																			<span class="vnb-bg look-inside-cover-small">&nbsp;</span>
+																	</a>
+							</div>
+
+							<p class="price-info-nd">
+																            <a href="                            https://www.vinabook.com/nghe-thuat-nam-bat-co-hoi-tang-truong-p84884.html
+                        " class="product-title" title="Nghệ Thuật Nắm Bắt Cơ Hội Tăng Trưởng">                    Nghệ Thuật Nắm Bắt Cơ Hội Tăng Trưởng
+            </a>    
+																									<span class="author">Nhiều Tác Giả</span>
+															</p>
+
+							<div class="price-wrap">
+																                        <span class="cm-reload-22300084884 old_price_update" id="old_price_update_22300084884">
+                <input name="appearance[show_price_values]" value="1" type="hidden">
+                <input name="appearance[show_old_price]" value="1" type="hidden">
+                                    <span class="list-price" id="line_list_price_22300084884"><span class="strike"><span id="sec_list_price_22300084884" class="list-price nowrap">279.000</span>&nbsp;<span class="list-price nowrap">₫</span></span></span>
+                            </span>
+            &nbsp;
+																    <span class="cm-reload-22300084884 price-update" id="price_update_22300084884">
+        <input name="appearance[show_price_values]" value="1" type="hidden">
+        <input name="appearance[show_price]" value="1" type="hidden">
+                                    
+                                    						<span class="price" id="line_discounted_price_22300084884"> <span id="sec_discounted_price_22300084884" class="price-num">223.000</span>&nbsp;<span class="price-num">₫</span></span>
+                                                    
+
+                            <!--price_update_22300084884--></span>
+
+
+																    
+							</div>
+
+														
+
+							
+
+														</form>
+    
+						</td>
+						<td class="product-spacer">&nbsp;</td>
+														
+																		    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<td class="product-spacer">&nbsp;</td>
+						<td class="compact" style="width: 20%">    
+														    <form action="https://www.vinabook.com/" method="post" name="product_form_22300084886" enctype="multipart/form-data" class="cm-disable-empty-files   cm-processed-form">
+<input name="result_ids" value="cart_status*,wish_list*,checkout*,account_info*" type="hidden">
+    <input name="redirect_url" value="index.php" type="hidden">
+<input name="product_data[84886][product_id]" value="84886" type="hidden">
+
+							
+							<div class="product_thumb">
+								<a title="Lãnh Đạo Giỏi Phải Biết Tạo Niềm Vui" class="image-border" href="https://www.vinabook.com/lanh-dao-gioi-phai-biet-tao-niem-vui-p84886.html">
+																														<span class="thumb-discount-label thumb-discount-label_is_inside">-20%</span>
+																												<img class="   pict lazy-img" src="https://www.vinabook.com/images/thumbnails/product/115x/317093_lanh-dao-gioi-phai-biet-tao-niem-vui.jpg" data-src="https://www.vinabook.com/images/thumbnails/product/115x/317093_lanh-dao-gioi-phai-biet-tao-niem-vui.jpg" alt="Lãnh Đạo Giỏi Phải Biết Tạo Niềm Vui" title="Lãnh Đạo Giỏi Phải Biết Tạo Niềm Vui" style="opacity: 1;"><noscript><img src="https://www.vinabook.com/images/thumbnails/product/115x/317093_lanh-dao-gioi-phai-biet-tao-niem-vui.jpg"/></noscript>
+																			<span class="vnb-bg look-inside-cover-small">&nbsp;</span>
+																	</a>
+							</div>
+
+							<p class="price-info-nd">
+																            <a href="                            https://www.vinabook.com/lanh-dao-gioi-phai-biet-tao-niem-vui-p84886.html
+                        " class="product-title" title="Lãnh Đạo Giỏi Phải Biết Tạo Niềm Vui">                    Lãnh Đạo Giỏi Phải Biết Tạo Niềm Vui
+            </a>    
+																									<span class="author">Jurgen Appelo</span>
+															</p>
+
+							<div class="price-wrap">
+																                        <span class="cm-reload-22300084886 old_price_update" id="old_price_update_22300084886">
+                <input name="appearance[show_price_values]" value="1" type="hidden">
+                <input name="appearance[show_old_price]" value="1" type="hidden">
+                                    <span class="list-price" id="line_list_price_22300084886"><span class="strike"><span id="sec_list_price_22300084886" class="list-price nowrap">249.000</span>&nbsp;<span class="list-price nowrap">₫</span></span></span>
+                            </span>
+            &nbsp;
+																    <span class="cm-reload-22300084886 price-update" id="price_update_22300084886">
+        <input name="appearance[show_price_values]" value="1" type="hidden">
+        <input name="appearance[show_price]" value="1" type="hidden">
+                                    
+                                    						<span class="price" id="line_discounted_price_22300084886"> <span id="sec_discounted_price_22300084886" class="price-num">199.000</span>&nbsp;<span class="price-num">₫</span></span>
+                                                    
+
+                            <!--price_update_22300084886--></span>
+
+
+																    
+							</div>
+
+														
+
+							
+
+														</form>
+    
+						</td>
+						<td class="product-spacer">&nbsp;</td>
+														
+																		    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<td class="product-spacer">&nbsp;</td>
+						<td class="compact" style="width: 20%">    
+														    <form action="https://www.vinabook.com/" method="post" name="product_form_22300084885" enctype="multipart/form-data" class="cm-disable-empty-files   cm-processed-form">
+<input name="result_ids" value="cart_status*,wish_list*,checkout*,account_info*" type="hidden">
+    <input name="redirect_url" value="index.php" type="hidden">
+<input name="product_data[84885][product_id]" value="84885" type="hidden">
+
+							
+							<div class="product_thumb">
+								<a title="Get Backed - Ai &quot;Chống Lưng&quot; Cho Bạn" class="image-border" href="https://www.vinabook.com/get-backed-ai-chong-lung-cho-ban-p84885.html">
+																														<span class="thumb-discount-label thumb-discount-label_is_inside">-20%</span>
+																												<img class="   pict lazy-img" src="https://www.vinabook.com/images/thumbnails/product/115x/317094_get-backed-ai-chong-lung-cho-ban.jpg" data-src="https://www.vinabook.com/images/thumbnails/product/115x/317094_get-backed-ai-chong-lung-cho-ban.jpg" alt="Get Backed - Ai &quot;Chống Lưng&quot; Cho Bạn" title="Get Backed - Ai &quot;Chống Lưng&quot; Cho Bạn" style="opacity: 1;"><noscript><img src="https://www.vinabook.com/images/thumbnails/product/115x/317094_get-backed-ai-chong-lung-cho-ban.jpg"/></noscript>
+																			<span class="vnb-bg look-inside-cover-small">&nbsp;</span>
+																	</a>
+							</div>
+
+							<p class="price-info-nd">
+																            <a href="                            https://www.vinabook.com/get-backed-ai-chong-lung-cho-ban-p84885.html
+                        " class="product-title" title="Get Backed - Ai &quot;Chống Lưng&quot; Cho Bạn">                    Get Backed - Ai "Chống Lưng" Cho Bạn
+            </a>    
+																									<span class="author">Evan Baehr</span>
+															</p>
+
+							<div class="price-wrap">
+																                        <span class="cm-reload-22300084885 old_price_update" id="old_price_update_22300084885">
+                <input name="appearance[show_price_values]" value="1" type="hidden">
+                <input name="appearance[show_old_price]" value="1" type="hidden">
+                                    <span class="list-price" id="line_list_price_22300084885"><span class="strike"><span id="sec_list_price_22300084885" class="list-price nowrap">239.000</span>&nbsp;<span class="list-price nowrap">₫</span></span></span>
+                            </span>
+            &nbsp;
+																    <span class="cm-reload-22300084885 price-update" id="price_update_22300084885">
+        <input name="appearance[show_price_values]" value="1" type="hidden">
+        <input name="appearance[show_price]" value="1" type="hidden">
+                                    
+                                    						<span class="price" id="line_discounted_price_22300084885"> <span id="sec_discounted_price_22300084885" class="price-num">191.000</span>&nbsp;<span class="price-num">₫</span></span>
+                                                    
+
+                            <!--price_update_22300084885--></span>
+
+
+																    
+							</div>
+
+														
+
+							
+
+														</form>
+    
+						</td>
+						<td class="product-spacer">&nbsp;</td>
+																</tr>
+			</tbody></table>
+
+	
+
+	<a class="readmore float-right" href="https://www.vinabook.com/sach-moi-phat-hanh">Xem thêm</a></div>

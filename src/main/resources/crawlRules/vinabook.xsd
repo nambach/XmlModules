@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="pages" type="pagesType"/>
+  <xs:complexType name="pageType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="xs:string" name="url"/>
+      <xs:element type="xs:string" name="incrementParam"/>
+      <xs:element type="xs:string" name="incrementFrom"/>
+      <xs:element type="xs:string" name="incrementTo"/>
+      <xs:element type="xs:string" name="booklist"/>
+      <xs:element type="xs:string" name="booklistJsQuerySelector"/>
+      <xs:element type="bookType" name="book"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pagesType">
+    <xs:sequence>
+      <xs:element type="pageType" name="page" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bookType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="entity"/>
+      <xs:element type="xs:string" name="title"/>
+      <xs:element type="xs:string" name="link"/>
+      <xs:element type="xs:string" name="image"/>
+      <xs:element type="xs:string" name="author"/>
+      <xs:element type="xs:string" name="oldPrice"/>
+      <xs:element type="xs:string" name="price"/>
+      <xs:element type="xs:string" name="status"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://nambm.io/crawling-rule"
+       xsi:schemaLocation="http://nambm.io/crawling-rule crawling.xsd">
+    <page>
+        <name>Sách vừa phát hành trong tuần</name>
+        <url>https://www.vinabook.com/sach-moi-phat-hanh</url>
+        <basedUrl>https://www.vinabook.com/</basedUrl>
+        <incrementParam>?page={i}</incrementParam>
+        <incrementFrom>1</incrementFrom>
+        <incrementTo>2</incrementTo>
+        <collectionJsQuerySelector> </collectionJsQuerySelector>
+        <collectionXpath>//table[contains(@class, "template-products")]</collectionXpath>
+        <itemXpath>*//td[contains(@class, "compact")]</itemXpath>
+        <item>
+            <detailXpath detailName="title">*//a[contains(@class, "product-title")]/text()</detailXpath>
+            <detailXpath detailName="link">*//a[contains(@class, "product-title")]/@href</detailXpath>
+            <detailXpath detailName="image">*//a[contains(@class, "image-border")]//img/@data-src</detailXpath>
+            <detailXpath detailName="author">*//span[contains(@class, "author")]/text()</detailXpath>
+            <detailXpath detailName="oldPrice">*//div[contains(@class, "price-wrap")]//span[contains(@class, "list-price")]/text()</detailXpath>
+            <detailXpath detailName="price">*//div[contains(@class, "price-wrap")]//span[contains(@class, "price-num")]/text()</detailXpath>
+            <detailXpath detailName="status">*//span[contains(@class, "qty-out-of-stock")]/text()</detailXpath>
+        </item>
+    </page>
+</pages>
