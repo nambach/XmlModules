@@ -45,6 +45,7 @@ public class Crawler {
         for (int i = 0; i < rules.getRule().size(); i++) {
             Rule rule = rules.getRule().get(i);
             System.out.println();
+            System.out.println(rule.getSiteName());
             System.out.println(rule.getName());
 
             //ITERATE ALL PAGES IN ONE URL

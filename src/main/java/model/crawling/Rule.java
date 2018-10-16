@@ -17,6 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="siteName" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="url" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="basedUrl" type="{http://www.w3.org/2001/XMLSchema}string"/>
@@ -37,6 +38,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "rule", propOrder = {
+    "siteName",
     "name",
     "url",
     "basedUrl",
@@ -50,6 +52,8 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Rule {
 
+    @XmlElement(required = true)
+    protected String siteName;
     @XmlElement(required = true)
     protected String name;
     @XmlElement(required = true)
@@ -70,6 +74,30 @@ public class Rule {
     protected String collectionXpath;
     @XmlElement(required = true)
     protected Item item;
+
+    /**
+     * Gets the value of the siteName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getSiteName() {
+        return siteName;
+    }
+
+    /**
+     * Sets the value of the siteName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSiteName(String value) {
+        this.siteName = value;
+    }
 
     /**
      * Gets the value of the name property.

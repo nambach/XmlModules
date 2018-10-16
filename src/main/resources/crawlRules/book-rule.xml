@@ -3,6 +3,7 @@
        xmlns="http://nambm.io/crawling-rule"
        xsi:schemaLocation="http://nambm.io/crawling-rule crawling.xsd">
     <rule>
+        <siteName>Vinabook</siteName>
         <name>Sách vừa phát hành trong tuần</name>
         <url>https://www.vinabook.com/sach-moi-phat-hanh</url>
         <basedUrl>https://www.vinabook.com/</basedUrl>
@@ -24,6 +25,7 @@
     </rule>
 
     <rule>
+        <siteName>Pibook</siteName>
         <name>Kho Sách Giảm Giá</name>
         <url>https://pibook.vn/sach-pibook-khuyen-doc</url>
         <basedUrl>https://pibook.vn/</basedUrl>
