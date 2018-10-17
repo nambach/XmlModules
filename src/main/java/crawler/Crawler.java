@@ -1,5 +1,6 @@
 package crawler;
 
+import model.book.RawBook;
 import model.crawling.Item;
 import model.crawling.ItemDetail;
 import model.crawling.Rule;
@@ -7,6 +8,8 @@ import model.crawling.Rules;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import repository.generic.impl.GenericRepositoryImpl;
+import repository.impl.RawBookRepositoryImpl;
 import utils.DomUtils;
 import utils.FileUtils;
 import utils.JAXBUtils;
@@ -28,9 +31,23 @@ public class Crawler {
 
     private List<Map<String, String>> results;
 
+    private RawBookRepositoryImpl repository;
+
     public Crawler(String crawlRulePath) {
         //get crawling rules
         rules = JAXBUtils.unmarshalling(crawlRulePath, null, Rules.class);
+        repository = new RawBookRepositoryImpl(GenericRepositoryImpl.getFactory());
+    }
+
+    public List<Map<String, String>> getResults() {
+        if (results == null) {
+            results = new LinkedList<>();
+        }
+        return results;
+    }
+
+    public RawBookRepositoryImpl getRepository() {
+        return repository;
     }
 
     public void crawl() {
@@ -45,8 +62,8 @@ public class Crawler {
         for (int i = 0; i < rules.getRule().size(); i++) {
             Rule rule = rules.getRule().get(i);
             System.out.println();
-            System.out.println(rule.getSiteName());
-            System.out.println(rule.getName());
+//            System.out.println(rule.getSiteName());
+//            System.out.println(rule.getName());
 
             //ITERATE ALL PAGES IN ONE URL
             for (int pageNo = Integer.parseInt(rule.getIncrementFrom()); pageNo <= Integer.parseInt(rule.getIncrementTo()); pageNo++) {
@@ -60,16 +77,8 @@ public class Crawler {
                     URLConnection connection = url.openConnection();
 
                     textContent = FileUtils.getString(connection.getInputStream());
-                    FileUtils.exportFile(textContent, FileUtils.getFilePath("textutils/raw-" + i + ".xml"));
-
-//                    org.jsoup.nodes.Document html = Jsoup.connect(pageRule.getUrl() + incrementParam).get();
-//                    org.jsoup.nodes.Element targetFragment = html.body().selectFirst(pageRule.getBooklistJsQuerySelector());
-//
-//                    textContent = targetFragment.outerHtml();
 
                     textContent = TextUtils.refineHtml(textContent);
-
-                    FileUtils.exportFile(textContent, FileUtils.getFilePath("textutils/" + i + ".xml"));
                 } catch (Exception e) {
                     e.printStackTrace();
                     System.out.println("IO Error: " + e);
@@ -84,30 +93,43 @@ public class Crawler {
                 NodeList collection = DomUtils.evaluateNode(fragment, rule.getCollectionXpath(), NodeList.class);
 
                 Item itemRule = rule.getItem();
+
+                List<Map<String, String>> batch = new LinkedList<>();
+                collectionLoop:
                 for (int j = 0; j < (collection != null ? collection.getLength() : 0); j++) {
                     Node item = collection.item(j);
 
                     Map<String, String> obj = new HashMap<>();
 
+                    obj.put("siteName", rule.getSiteName());
+
                     for (ItemDetail detailRule : itemRule.getDetailXpath()) {
                         String name = detailRule.getDetailName();
                         String value = DomUtils.evaluateNode(item, detailRule.getValue(), String.class);
 
+                        if ("id".equals(name) && (value != null && value.trim().equals(""))) {
+                            continue collectionLoop;
+                        }
+
                         if (detailRule.isIsRelativeURL()) {
                             value = rule.getBasedUrl() + value;
                         }
+                        value = detailRule.getPrefix() + value + detailRule.getPostfix();
 
                         obj.put(name, value);
                     }
 
                     results.add(obj);
-                    System.out.println(obj);
+                    batch.add(obj);
+//                    System.out.println(obj);
                 }
+
+                repository.insertBatch(RawBook.convert(batch));
 
                 //End of some code for iterate pages
             }
         }
 
-        System.out.println(results.size());
+//        System.out.println(results.size());
     }
 }

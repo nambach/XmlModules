@@ -1,28 +1,55 @@
 package model.book;
 
-public class RawBook {
+import repository.generic.GenericEntity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
+@Entity
+@Table(name = "`RawBook`")
+public class RawBook implements GenericEntity {
+
+    @Id
+    @Column(name = "`id`")
+    private String id;
+    @Column(name = "`siteName`")
+    private String siteName;
 
     //Basic information
+    @Column(name = "`title`")
     private String title;
+    @Column(name = "`authors`")
     private String authors;
 
     //Image
+    @Column(name = "`image`")
     private String image;
 
     //Link to original page
+    @Column(name = "`link`")
     private String link;
 
     //Prices
+    @Column(name = "`price`")
     private String price;
+    @Column(name = "`oldPrice`")
     private String oldPrice;
 
     //Status
+    @Column(name = "`status`")
     private String status;
 
     public RawBook() {
     }
 
-    public RawBook(String title, String authors, String image, String link, String price, String oldPrice, String status) {
+    public RawBook(String id, String siteName, String title, String authors, String image, String link, String price, String oldPrice, String status) {
+        this.id = id;
+        this.siteName = siteName;
         this.title = title;
         this.authors = authors;
         this.image = image;
@@ -30,6 +57,14 @@ public class RawBook {
         this.price = price;
         this.oldPrice = oldPrice;
         this.status = status;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -88,10 +123,20 @@ public class RawBook {
         this.status = status;
     }
 
+    public String getSiteName() {
+        return siteName;
+    }
+
+    public void setSiteName(String siteName) {
+        this.siteName = siteName;
+    }
+
     @Override
     public String toString() {
         return "RawBook{" +
-                "title='" + title + '\'' +
+                "id='" + id + '\'' +
+                ", siteName='" + siteName + '\'' +
+                ", title='" + title + '\'' +
                 ", authors='" + authors + '\'' +
                 ", image='" + image + '\'' +
                 ", link='" + link + '\'' +
@@ -99,5 +144,32 @@ public class RawBook {
                 ", oldPrice='" + oldPrice + '\'' +
                 ", status='" + status + '\'' +
                 '}';
+    }
+
+    @Override
+    public String getEntityId() {
+        return getId();
+    }
+
+    public static RawBook convert(Map<String, String> obj) {
+        String id = obj.getOrDefault("id", "");
+        String siteName = obj.getOrDefault("siteName", "");
+        String title = obj.getOrDefault("title", "");
+        String authors = obj.getOrDefault("authors", "");
+        String image = obj.getOrDefault("image", "");
+        String link = obj.getOrDefault("link", "");
+        String price = obj.getOrDefault("price", "");
+        String oldPrice = obj.getOrDefault("oldPrice", "");
+        String status = obj.getOrDefault("status", "");
+
+        return new RawBook(id, siteName, title, authors, image, link, price, oldPrice, status);
+    }
+
+    public static List<RawBook> convert(List<Map<String, String>> list) {
+        List<RawBook> rawBooks = new LinkedList<>();
+        for (Map<String, String> item : list) {
+            rawBooks.add(convert(item));
+        }
+        return rawBooks;
     }
 }
