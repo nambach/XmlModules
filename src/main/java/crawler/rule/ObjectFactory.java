@@ -10,7 +10,7 @@ import javax.xml.namespace.QName;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the model.crawling package. 
+ * generated in the crawler.rule package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -27,7 +27,7 @@ public class ObjectFactory {
     private final static QName _Rules_QNAME = new QName("http://nambm.io/crawling-rule", "rules");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: model.crawling
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: crawler.rule
      * 
      */
     public ObjectFactory() {
@@ -39,6 +39,14 @@ public class ObjectFactory {
      */
     public Rules createRules() {
         return new Rules();
+    }
+
+    /**
+     * Create an instance of {@link UrlType }
+     * 
+     */
+    public UrlType createUrlType() {
+        return new UrlType();
     }
 
     /**
@@ -63,6 +71,22 @@ public class ObjectFactory {
      */
     public ItemDetail createItemDetail() {
         return new ItemDetail();
+    }
+
+    /**
+     * Create an instance of {@link TopicList }
+     * 
+     */
+    public TopicList createTopicList() {
+        return new TopicList();
+    }
+
+    /**
+     * Create an instance of {@link TopicType }
+     * 
+     */
+    public TopicType createTopicType() {
+        return new TopicType();
     }
 
     /**

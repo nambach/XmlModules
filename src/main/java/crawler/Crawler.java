@@ -1,10 +1,6 @@
 package crawler;
 
-import model.RawBook;
-import crawler.rule.Item;
-import crawler.rule.ItemDetail;
-import crawler.rule.Rule;
-import crawler.rule.Rules;
+import crawler.rule.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -36,6 +32,11 @@ public class Crawler {
     public Crawler(String crawlRulePath) {
         //get crawling rules
         rules = JAXBUtils.unmarshalling(crawlRulePath, null, Rules.class);
+//        repository = new RawBookRepositoryImpl(GenericRepositoryImpl.getFactory());
+    }
+
+    public Crawler(Rules rules) {
+        this.rules = rules;
         repository = new RawBookRepositoryImpl(GenericRepositoryImpl.getFactory());
     }
 
@@ -58,78 +59,94 @@ public class Crawler {
             return;
         }
 
-        //ITERATE ALL URLs
-        for (int i = 0; i < rules.getRule().size(); i++) {
-            Rule rule = rules.getRule().get(i);
+        //ITERATE ALL RULES
+        for (Rule rule : rules.getRule()) {
+
+            String baseUrl = rule.getBasedUrl();
+            String siteName = rule.getSiteName();
+            String collectionXPath = rule.getCollectionXpath();
+            Item itemRule = rule.getItem();
+
             System.out.println();
-//            System.out.println(rule.getSiteName());
-//            System.out.println(rule.getName());
+            System.out.println();
+            System.out.println(siteName);
 
-            //ITERATE ALL PAGES IN ONE URL
-            for (int pageNo = Integer.parseInt(rule.getIncrementFrom()); pageNo <= Integer.parseInt(rule.getIncrementTo()); pageNo++) {
+            //ITERATE ALL URLs (Topics)
+            for (TopicType topic : rule.getTopics().getTopic()) {
 
-                //FETCHING HTML
-                String textContent = "";
-                try {
-                    String incrementParam = rule.getIncrementParam().replaceAll("\\{i}", "" + pageNo);
+                String topicName = topic.getTopicName();
+                String topicCode = topic.getTopicCode();
+                String fragmentXPath = topic.getFragmentXpath();
+                UrlType topicURL = topic.getUrl();
 
-                    URL url = new URL(rule.getUrl() + incrementParam);
-                    URLConnection connection = url.openConnection();
+                System.out.println();
+                System.out.println(topicName);
 
-                    textContent = FileUtils.getString(connection.getInputStream());
+                //ITERATE ALL PAGES IN ONE URL
+                for (int pageNo = Integer.parseInt(topicURL.getFrom()); pageNo <= Integer.parseInt(topicURL.getTo()); pageNo++) {
 
-                    textContent = TextUtils.refineHtml(textContent);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    System.out.println("IO Error: " + e);
-                    continue;
-                }
-
-                //PARSE text into DOM
-                Document document = DomUtils.parseStringIntoDOM(textContent);
-
-                Node fragment = DomUtils.evaluateNode(document, rule.getFragmentXpath(), Node.class);
-
-                NodeList collection = DomUtils.evaluateNode(fragment, rule.getCollectionXpath(), NodeList.class);
-
-                Item itemRule = rule.getItem();
-
-                List<Map<String, String>> batch = new LinkedList<>();
-                collectionLoop:
-                for (int j = 0; j < (collection != null ? collection.getLength() : 0); j++) {
-                    Node item = collection.item(j);
-
-                    Map<String, String> obj = new HashMap<>();
-
-                    obj.put("siteName", rule.getSiteName());
-
-                    for (ItemDetail detailRule : itemRule.getDetailXpath()) {
-                        String name = detailRule.getDetailName();
-                        String value = DomUtils.evaluateNode(item, detailRule.getValue(), String.class);
-
-                        if ("id".equals(name) && (value != null && value.trim().equals(""))) {
-                            continue collectionLoop;
+                    //FETCHING HTML
+                    String textContent;
+                    try {
+                        String incrementParam = "";
+                        if (!topicURL.getIncrementParam().trim().equals("")) {
+                            incrementParam = topicURL.getIncrementParam().replaceAll("\\{i}", String.valueOf(pageNo));
                         }
 
-                        if (detailRule.isIsRelativeURL()) {
-                            value = rule.getBasedUrl() + value;
-                        }
-                        value = detailRule.getPrefix() + value + detailRule.getPostfix();
+                        URL url = new URL(topicURL.getValue() + incrementParam);
+                        URLConnection connection = url.openConnection();
 
-                        obj.put(name, value);
+                        textContent = FileUtils.getString(connection.getInputStream());
+
+                        textContent = TextUtils.refineHtml(textContent);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        System.out.println("IO Error: " + e);
+                        break;//exit pages loop
                     }
 
-                    results.add(obj);
-                    batch.add(obj);
-//                    System.out.println(obj);
-                }
+                    //PARSE text into DOM
+                    Document document = DomUtils.parseStringIntoDOM(textContent);
 
-                repository.insertBatch(RawBook.convert(batch));
+                    Node fragment = DomUtils.evaluateNode(document, fragmentXPath, Node.class);
 
-                //End of some code for iterate pages
-            }
-        }
+                    NodeList collection = DomUtils.evaluateNode(fragment, collectionXPath, NodeList.class);
 
-//        System.out.println(results.size());
+                    if (collection == null || collection.getLength() == 0) {
+                        break;//exit pages loop
+                    }
+
+                    collectionLoop:
+                    for (int j = 0; j < collection.getLength(); j++) {
+                        Map<String, String> obj = new HashMap<>();
+                        Node item = collection.item(j);
+
+                        obj.put("siteName", siteName);
+
+                        for (ItemDetail detailXPath : itemRule.getDetailXpath()) {
+                            String name = detailXPath.getDetailName();
+                            String value = DomUtils.evaluateNode(item, detailXPath.getValue(), String.class);
+
+                            if ("id".equals(name) && (value != null && value.trim().equals(""))) {
+                                continue collectionLoop;//ignore item that does not have an ID
+                            }
+
+                            value = detailXPath.getPrefix() + value + detailXPath.getPostfix();
+
+                            obj.put(name, value);
+                        }//End one item
+
+                        results.add(obj);
+                        System.out.println(obj);
+
+                    }//End items in one topic
+
+                }//End topic
+
+            }//End all topics for one rule
+
+        }//End all rules
+
+        System.out.println(results.size());
     }
 }

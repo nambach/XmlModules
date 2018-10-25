@@ -4,37 +4,21 @@
        xsi:schemaLocation="http://nambm.io/crawling-rule crawling.xsd">
     <rule>
         <siteName>Vinabook</siteName>
-        <name>Sách vừa phát hành trong tuần</name>
-        <url>https://www.vinabook.com/sach-moi-phat-hanh</url>
         <basedUrl>https://www.vinabook.com/</basedUrl>
-        <incrementParam>?page={i}</incrementParam>
-        <incrementFrom>1</incrementFrom>
-        <incrementTo>0</incrementTo>
-        <fragmentJsQuerySelector> </fragmentJsQuerySelector>
-        <fragmentXpath>//table[contains(@class, "template-products")]</fragmentXpath>
-        <collectionXpath>*//td[contains(@class, "compact")]</collectionXpath>
-        <item>
-            <detailXpath detailName="id" prefix="VNB_">*//input[contains(@name, 'product_id')]/@value</detailXpath>
-            <detailXpath detailName="title">*//a[contains(@class, "product-title")]/text()</detailXpath>
-            <detailXpath detailName="link">*//a[contains(@class, "product-title")]/@href</detailXpath>
-            <detailXpath detailName="image">*//a[contains(@class, "image-border")]//img/@data-src</detailXpath>
-            <detailXpath detailName="authors">*//span[contains(@class, "author")]/text()</detailXpath>
-            <detailXpath detailName="oldPrice">*//div[contains(@class, "price-wrap")]//span[contains(@class, "list-price")]/text()</detailXpath>
-            <detailXpath detailName="price">*//div[contains(@class, "price-wrap")]//span[contains(@class, "price-num")]/text()</detailXpath>
-            <detailXpath detailName="discountRate">*//span[contains(@class, "thumb-discount-label")]/text()</detailXpath>
-            <detailXpath detailName="status">boolean(1 - boolean(*//span[contains(@class, "qty-out-of-stock")]/text()))</detailXpath>
-        </item>
-    </rule>
-    <rule>
-        <siteName>Vinabook</siteName>
-        <name>Kho Sách Giảm Giá</name>
-        <url>https://www.vinabook.com/kho-sach-giam-gia</url>
-        <basedUrl>https://www.vinabook.com/</basedUrl>
-        <incrementParam>?page={i}</incrementParam>
-        <incrementFrom>1</incrementFrom>
-        <incrementTo>0</incrementTo>
-        <fragmentJsQuerySelector> </fragmentJsQuerySelector>
-        <fragmentXpath>//table[contains(@class, "template-products")]</fragmentXpath>
+        <topics>
+            <topic>
+                <topicName>Sách vừa phát hành trong tuần</topicName>
+                <topicCode>newArr</topicCode>
+                <url incrementParam="?page={i}" to="20">https://www.vinabook.com/sach-moi-phat-hanh</url>
+                <fragmentXpath>//table[contains(@class, "template-products")]</fragmentXpath>
+            </topic>
+            <topic>
+                <topicName>Kho Sách Giảm Giá</topicName>
+                <topicCode>sale</topicCode>
+                <url incrementParam="?page={i}" to="20">https://www.vinabook.com/kho-sach-giam-gia</url>
+                <fragmentXpath>//table[contains(@class, "template-products")]</fragmentXpath>
+            </topic>
+        </topics>
         <collectionXpath>*//td[contains(@class, "compact")]</collectionXpath>
         <item>
             <detailXpath detailName="id" prefix="VNB_">*//input[contains(@name, 'product_id')]/@value</detailXpath>
@@ -51,14 +35,15 @@
 
     <rule>
         <siteName>Pibook</siteName>
-        <name>Kho Sách Giảm Giá</name>
-        <url>https://pibook.vn/sach-pibook-khuyen-doc</url>
         <basedUrl>https://pibook.vn/</basedUrl>
-        <incrementParam>?page={i}</incrementParam>
-        <incrementFrom>5</incrementFrom>
-        <incrementTo>100</incrementTo>
-        <fragmentJsQuerySelector>div.dmslider</fragmentJsQuerySelector>
-        <fragmentXpath>//div[contains(@class, "dmslider")]</fragmentXpath>
+        <topics>
+            <topic>
+                <topicName>Sách Khuyên đọc</topicName>
+                <topicCode>recommend</topicCode>
+                <url incrementParam="?page={i}" to="4">https://pibook.vn/sach-pibook-khuyen-doc</url>
+                <fragmentXpath>//div[contains(@class, "dmslider")]</fragmentXpath>
+            </topic>
+        </topics>
         <collectionXpath>*//li</collectionXpath>
         <item>
             <detailXpath detailName="id" prefix="PI_">substring-before(substring-after(p[@align='center']/a/@onclick, 'UpdateProduct('), ',')</detailXpath>

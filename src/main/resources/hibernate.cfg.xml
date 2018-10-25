@@ -16,7 +16,7 @@
 
         <property name="show_sql">true</property>
 
-        <mapping class="model.book.RawBook"/>
+        <mapping class="model.RawBook"/>
 
     </session-factory>
 </hibernate-configuration>
