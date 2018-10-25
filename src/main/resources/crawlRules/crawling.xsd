@@ -43,6 +43,7 @@
         <xs:attribute name="incrementParam" type="xs:string" default=""/>
         <xs:attribute name="from" type="xs:string" default="1"/>
         <xs:attribute name="to" type="xs:string" default="1"/>
+        <xs:attribute name="step" type="xs:string" default="1"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>

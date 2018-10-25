@@ -82,8 +82,12 @@ public class Crawler {
                 System.out.println();
                 System.out.println(topicName);
 
+                int from = Integer.parseInt(topicURL.getFrom());
+                int to = Integer.parseInt(topicURL.getTo());
+                int step = Integer.parseInt(topicURL.getStep());
+
                 //ITERATE ALL PAGES IN ONE URL
-                for (int pageNo = Integer.parseInt(topicURL.getFrom()); pageNo <= Integer.parseInt(topicURL.getTo()); pageNo++) {
+                for (int pageNo = from; pageNo <= to; pageNo += step) {
 
                     //FETCHING HTML
                     String textContent;
@@ -113,6 +117,7 @@ public class Crawler {
                     NodeList collection = DomUtils.evaluateNode(fragment, collectionXPath, NodeList.class);
 
                     if (collection == null || collection.getLength() == 0) {
+                        System.out.println("empty collection");
                         break;//exit pages loop
                     }
 

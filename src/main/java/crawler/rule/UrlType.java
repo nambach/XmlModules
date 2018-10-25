@@ -20,6 +20,7 @@ import javax.xml.bind.annotation.XmlValue;
  *       &lt;attribute name="incrementParam" type="{http://www.w3.org/2001/XMLSchema}string" default="" />
  *       &lt;attribute name="from" type="{http://www.w3.org/2001/XMLSchema}string" default="1" />
  *       &lt;attribute name="to" type="{http://www.w3.org/2001/XMLSchema}string" default="1" />
+ *       &lt;attribute name="step" type="{http://www.w3.org/2001/XMLSchema}string" default="1" />
  *     &lt;/extension>
  *   &lt;/simpleContent>
  * &lt;/complexType>
@@ -41,6 +42,8 @@ public class UrlType {
     protected String from;
     @XmlAttribute(name = "to")
     protected String to;
+    @XmlAttribute(name = "step")
+    protected String step;
 
     /**
      * Gets the value of the value property.
@@ -148,6 +151,34 @@ public class UrlType {
      */
     public void setTo(String value) {
         this.to = value;
+    }
+
+    /**
+     * Gets the value of the step property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getStep() {
+        if (step == null) {
+            return "1";
+        } else {
+            return step;
+        }
+    }
+
+    /**
+     * Sets the value of the step property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setStep(String value) {
+        this.step = value;
     }
 
 }
