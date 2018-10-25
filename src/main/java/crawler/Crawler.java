@@ -1,10 +1,10 @@
 package crawler;
 
-import model.book.RawBook;
-import model.crawling.Item;
-import model.crawling.ItemDetail;
-import model.crawling.Rule;
-import model.crawling.Rules;
+import model.RawBook;
+import crawler.rule.Item;
+import crawler.rule.ItemDetail;
+import crawler.rule.Rule;
+import crawler.rule.Rules;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;

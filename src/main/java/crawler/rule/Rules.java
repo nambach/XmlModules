@@ -1,5 +1,5 @@
 
-package model.crawling;
+package crawler.rule;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

@@ -1,6 +1,6 @@
 package repository.impl;
 
-import model.book.RawBook;
+import model.RawBook;
 import org.hibernate.SessionFactory;
 import repository.generic.impl.GenericRepositoryImpl;
 

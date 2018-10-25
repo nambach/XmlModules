@@ -1,5 +1,5 @@
 
-package model.crawling;
+package crawler.rule;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;

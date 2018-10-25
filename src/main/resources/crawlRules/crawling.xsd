@@ -38,7 +38,6 @@
     <xs:simpleContent>
       <xs:extension base="xs:string">
         <xs:attribute name="detailName" type="xs:string"/>
-        <xs:attribute name="isRelativeURL" type="xs:boolean" default="false"/>
         <xs:attribute name="prefix" type="xs:string" default=""/>
         <xs:attribute name="postfix" type="xs:string" default=""/>
       </xs:extension>

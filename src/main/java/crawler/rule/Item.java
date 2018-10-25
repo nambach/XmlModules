@@ -1,5 +1,5 @@
 
-package model.crawling;
+package crawler.rule;
 
 import java.util.ArrayList;
 import java.util.List;
