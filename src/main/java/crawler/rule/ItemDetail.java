@@ -20,6 +20,7 @@ import javax.xml.bind.annotation.XmlValue;
  *       &lt;attribute name="detailName" type="{http://www.w3.org/2001/XMLSchema}string" />
  *       &lt;attribute name="prefix" type="{http://www.w3.org/2001/XMLSchema}string" default="" />
  *       &lt;attribute name="postfix" type="{http://www.w3.org/2001/XMLSchema}string" default="" />
+ *       &lt;attribute name="isRequired" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
  *     &lt;/extension>
  *   &lt;/simpleContent>
  * &lt;/complexType>
@@ -41,6 +42,8 @@ public class ItemDetail {
     protected String prefix;
     @XmlAttribute(name = "postfix")
     protected String postfix;
+    @XmlAttribute(name = "isRequired")
+    protected Boolean isRequired;
 
     /**
      * Gets the value of the value property.
@@ -144,6 +147,34 @@ public class ItemDetail {
      */
     public void setPostfix(String value) {
         this.postfix = value;
+    }
+
+    /**
+     * Gets the value of the isRequired property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public boolean isIsRequired() {
+        if (isRequired == null) {
+            return false;
+        } else {
+            return isRequired;
+        }
+    }
+
+    /**
+     * Sets the value of the isRequired property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setIsRequired(Boolean value) {
+        this.isRequired = value;
     }
 
 }

@@ -333,17 +333,6 @@
         <title>Tứ thư lãnh đạo - Thuật dụng</title>
     </book>
     <book>
-        <authors>Đang cập nhật</authors>
-        <id>NSV_4907</id>
-        <image>http://nhasachviet.vn//media/images/sach-minh-hoa/21%20bi%20mat%20cua%20nhung%20nha%20dien%20thuyet.jpg</image>
-        <link>http://nhasachviet.vn/sach/21-bi-mat-cua-nhung-nha-dien-thuyet-tai-ba-nhat-lich-su.html</link>
-        <oldPrice></oldPrice>
-        <price>x</price>
-        <siteName>Nhà sách Việt</siteName>
-        <status>true</status>
-        <title>21 bí mật của những nhà diễn</title>
-    </book>
-    <book>
         <authors>Quỳnh Thy</authors>
         <id>NSV_4894</id>
         <image>http://nhasachviet.vn//media/images/sach/hinh-minh-hoa/sach-dam-yeu.jpg</image>
@@ -980,28 +969,6 @@
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
         <title>Biết tất tật chuyện trong</title>
-    </book>
-    <book>
-        <authors>Phong Lộng</authors>
-        <id>NSV_3495</id>
-        <image>http://nhasachviet.vn//media/images/sach/xx-va-yy.jpg</image>
-        <link>http://nhasachviet.vn/sach/cuon-sach-bi-mat.html</link>
-        <oldPrice></oldPrice>
-        <price>x</price>
-        <siteName>Nhà sách Việt</siteName>
-        <status>true</status>
-        <title>Cuốn sách bí mật</title>
-    </book>
-    <book>
-        <authors>Thiên Lại Chỉ</authors>
-        <id>NSV_3494</id>
-        <image>http://nhasachviet.vn//media/images/sach/loi-chuc-phuc-cua-odin.jpg</image>
-        <link>http://nhasachviet.vn/sach/loi-chuc-phuc-cua-odin-–-tap-1.html</link>
-        <oldPrice></oldPrice>
-        <price>x</price>
-        <siteName>Nhà sách Việt</siteName>
-        <status>true</status>
-        <title>Lời chúc phúc của Odin – tập 1</title>
     </book>
     <book>
         <authors>Sơn Paris</authors>

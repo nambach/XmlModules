@@ -21,7 +21,7 @@
         </topics>
         <collectionXpath>*//td[contains(@class, "compact")]</collectionXpath>
         <item>
-            <detailXpath detailName="id" prefix="VNB_">*//input[contains(@name, 'product_id')]/@value</detailXpath>
+            <detailXpath detailName="id" prefix="VNB_" isRequired="true">*//input[contains(@name, 'product_id')]/@value</detailXpath>
             <detailXpath detailName="title">*//a[contains(@class, "product-title")]/text()</detailXpath>
             <detailXpath detailName="link">*//a[contains(@class, "product-title")]/@href</detailXpath>
             <detailXpath detailName="image">*//a[contains(@class, "image-border")]//img/@data-src</detailXpath>
@@ -46,7 +46,7 @@
         </topics>
         <collectionXpath>*//li</collectionXpath>
         <item>
-            <detailXpath detailName="id" prefix="PI_">substring-before(substring-after(p[@align='center']/a/@onclick, 'UpdateProduct('), ',')</detailXpath>
+            <detailXpath detailName="id" prefix="PI_" isRequired="true">substring-before(substring-after(p[@align='center']/a/@onclick, 'UpdateProduct('), ',')</detailXpath>
             <detailXpath detailName="title">div[contains(@class, "list1a1")]/a/text()</detailXpath>
             <detailXpath detailName="link" prefix="https://pibook.vn/">div[contains(@class, "list1a1")]/a/@href</detailXpath>
             <detailXpath detailName="image" prefix="https://pibook.vn/">div[contains(@class, "list1img")]//img/@data-original</detailXpath>
@@ -71,7 +71,7 @@
         </topics>
         <collectionXpath>div[contains(@class, 'product-item')]</collectionXpath>
         <item>
-            <detailXpath detailName="id" prefix="BBUY_">div[@productid]/@productid</detailXpath>
+            <detailXpath detailName="id" prefix="BBUY_" isRequired="true">div[@productid]/@productid</detailXpath>
             <detailXpath detailName="title">div[contains(@class, "t-view")]/a/text()</detailXpath>
             <detailXpath detailName="link" prefix="https://bookbuy.vn">div[contains(@class, "t-view")]/a/@href</detailXpath>
             <detailXpath detailName="image" prefix="https://bookbuy.vn">div[contains(@class, "img-view")]//img/@src</detailXpath>
@@ -96,13 +96,13 @@
         </topics>
         <collectionXpath>div[@class="box_book"]</collectionXpath>
         <item>
-            <detailXpath detailName="id" prefix="NSV_">substring-after(substring-before(a[@class="buy"]/@onclick, ","), "(")</detailXpath>
+            <detailXpath detailName="id" prefix="NSV_" isRequired="true">substring-after(substring-before(a[@class="buy"]/@onclick, ","), "(")</detailXpath>
             <detailXpath detailName="title">h4/a/text()</detailXpath>
             <detailXpath detailName="link">h4/a/@href</detailXpath>
             <detailXpath detailName="image">.//img/@src</detailXpath>
             <detailXpath detailName="authors">p[@class="author"]/text()</detailXpath>
             <detailXpath detailName="oldPrice">.//span[@class="price_vir"]/text()</detailXpath>
-            <detailXpath detailName="price">.//span[@class="price_buy"]/text()</detailXpath>
+            <detailXpath detailName="price" isRequired="true">.//span[@class="price_buy"]/text()</detailXpath>
             <detailXpath detailName="discountRate">div[contains(@class, "starPromotion")]/span/text()</detailXpath>
             <detailXpath detailName="status">boolean("true")</detailXpath>
         </item>

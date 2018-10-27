@@ -4,8 +4,6 @@ import crawler.rule.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import repository.generic.impl.GenericRepositoryImpl;
-import repository.impl.RawBookRepositoryImpl;
 import utils.DomUtils;
 import utils.FileUtils;
 import utils.JAXBUtils;
@@ -18,26 +16,26 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-public class Crawler {
+public class Crawler<T extends CrawlerResultProcessor> {
     //crawlRules
     //-----
     //List<RawBook>
 
     private Rules rules;
-
     private List<Map<String, String>> results;
-
-    private RawBookRepositoryImpl repository;
+    private T resultProcessor;
 
     public Crawler(String crawlRulePath) {
         //get crawling rules
         rules = JAXBUtils.unmarshalling(crawlRulePath, null, Rules.class);
-//        repository = new RawBookRepositoryImpl(GenericRepositoryImpl.getFactory());
     }
 
-    public Crawler(Rules rules) {
+    public void setRules(Rules rules) {
         this.rules = rules;
-        repository = new RawBookRepositoryImpl(GenericRepositoryImpl.getFactory());
+    }
+
+    public void setResultProcessor(T resultProcessor) {
+        this.resultProcessor = resultProcessor;
     }
 
     public List<Map<String, String>> getResults() {
@@ -47,8 +45,12 @@ public class Crawler {
         return results;
     }
 
-    public RawBookRepositoryImpl getRepository() {
-        return repository;
+    public Rules getRules() {
+        return rules;
+    }
+
+    public T getResultProcessor() {
+        return resultProcessor;
     }
 
     public void crawl() {
@@ -59,6 +61,8 @@ public class Crawler {
             return;
         }
 
+        System.out.println("===== Start crawling... =====");
+
         //ITERATE ALL RULES
         for (Rule rule : rules.getRule()) {
 
@@ -67,17 +71,19 @@ public class Crawler {
             String collectionXPath = rule.getCollectionXpath();
             Item itemRule = rule.getItem();
 
-            System.out.println();
-            System.out.println();
             System.out.println(siteName);
+            System.out.println(baseUrl);
 
             //ITERATE ALL URLs (Topics)
             for (TopicType topic : rule.getTopics().getTopic()) {
 
                 String topicName = topic.getTopicName();
                 String topicCode = topic.getTopicCode();
-                String fragmentXPath = topic.getFragmentXpath();
+
                 UrlType topicURL = topic.getUrl();
+
+                //The XPath to locate the position of main content
+                String fragmentXPath = topic.getFragmentXpath();
 
                 System.out.println();
                 System.out.println(topicName);
@@ -106,19 +112,20 @@ public class Crawler {
                     } catch (Exception e) {
                         e.printStackTrace();
                         System.out.println("IO Error: " + e);
-                        break;//exit pages loop
+                        break;//exit pages loop - go to next Topic
                     }
 
                     //PARSE text into DOM
                     Document document = DomUtils.parseStringIntoDOM(textContent);
 
+                    //Get target fragment (to eliminate missed evaluations)
                     Node fragment = DomUtils.evaluateNode(document, fragmentXPath, Node.class);
 
                     NodeList collection = DomUtils.evaluateNode(fragment, collectionXPath, NodeList.class);
 
                     if (collection == null || collection.getLength() == 0) {
                         System.out.println("empty collection");
-                        break;//exit pages loop
+                        break;//exit pages loop - go to next Topic
                     }
 
                     collectionLoop:
@@ -127,13 +134,16 @@ public class Crawler {
                         Node item = collection.item(j);
 
                         obj.put("siteName", siteName);
+                        obj.put("topicCode", topicCode);
 
                         for (ItemDetail detailXPath : itemRule.getDetailXpath()) {
                             String name = detailXPath.getDetailName();
                             String value = DomUtils.evaluateNode(item, detailXPath.getValue(), String.class);
 
-                            if ("id".equals(name) && (value != null && value.trim().equals(""))) {
-                                continue collectionLoop;//ignore item that does not have an ID
+                            if (detailXPath.isIsRequired()) {
+                                if (value != null && value.trim().equals("")) {
+                                    continue collectionLoop;//ignore any item (obj) in the collection that contains empty attribute(s)
+                                }
                             }
 
                             value = detailXPath.getPrefix() + value + detailXPath.getPostfix();
@@ -142,7 +152,11 @@ public class Crawler {
                         }//End one item
 
                         results.add(obj);
-                        System.out.println(obj);
+
+                        //System.out.println(obj);
+                        if (resultProcessor != null && resultProcessor.isNeededToProcessObject()) {
+                            resultProcessor.processResultObject(obj);
+                        }
 
                     }//End items in one topic
 
@@ -152,6 +166,9 @@ public class Crawler {
 
         }//End all rules
 
-        System.out.println(results.size());
+        //System.out.println(results.size());
+        if (resultProcessor != null && resultProcessor.isNeededToProcessList()) {
+            resultProcessor.processResultList(results);
+        }
     }
 }
