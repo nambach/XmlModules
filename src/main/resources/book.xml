@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://nambm.io/book"
+      xsi:schemaLocation="http://nambm.io/book ./crawlRules/book.xsd">
+    <authors>Matsuda Michio</authors>
+    <id>NSV_6198</id>
+    <image>http://nhasachviet.vn//media/images/sach/bach-khoa-toan-thu-nuoi-day-tre-tap-2.jpg</image>
+    <link>http://nhasachviet.vn/sach/combo-bach-khoa-toan-thu-nuoi-day-tre-bo-3-tap.html</link>
+    <oldPrice>247.000đ</oldPrice>
+    <price>210.000đ</price>
+    <siteName>Nhà sách Việt</siteName>
+    <status>true</status>
+    <title>Combo Bách khoa toàn thư nuôi</title>
+</book>

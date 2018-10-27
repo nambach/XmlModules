@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+           targetNamespace="http://nambm.io/book"
+           xmlns="http://nambm.io/book"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="book" type="bookType"/>
+
+    <xs:complexType name="bookType">
+        <xs:all>
+            <xs:element type="notNullString" name="id"/>
+            <xs:element type="notNullString" name="title"/>
+            <xs:element type="xs:string" name="authors"/>
+            <xs:element type="xs:string" name="image"/>
+            <xs:element type="notNullString" name="link"/>
+            <xs:element type="notNullString" name="price"/>
+            <xs:element type="xs:string" name="oldPrice"/>
+            <xs:element type="notNullString" name="status"/>
+            <xs:element type="xs:string" name="siteName"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:simpleType name="notNullString">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse"/>
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
