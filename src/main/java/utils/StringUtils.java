@@ -28,9 +28,16 @@ public class StringUtils {
         }
 
         double commonLength =  m[arr1.length - 1][arr2.length - 1];
+        double sampleLength = Math.min(arr1.length - 1, arr2.length - 1);
+
+        // if the gap of number of words is relatively large, then they must be 2 different words
+        // => then calculate the average lengths instead of min length
+        if (Math.abs(arr1.length - arr2.length) * 1.0 / Math.min(arr1.length, arr2.length) > 0.5) {
+            sampleLength = avg(arr1.length, arr2.length);
+        }
 
         if (compare.length > 0 && compare[0]) {
-            return commonLength / Integer.min(arr1.length - 1, arr2.length - 1);
+            return commonLength / sampleLength;
         } else {
             return commonLength;
         }
@@ -45,8 +52,8 @@ public class StringUtils {
     }
 
     public static void main(String[] args) {
-        String a = "Nếu biết trăm năm là hữu hạn(Tái bản 2018, NBX a)";
-        String b = "Nếu biết trăm năm là hữu hạn tái bản 2016";
+        String a = "Lên Đường Với Trái Tim Trần Trụi - Tôi Là Một Con Lừa";
+        String b = "Khiêu Vũ Với Ngòi Bút";
 
         double rs = calculateLCS(a, b, true);
         System.out.println(rs);

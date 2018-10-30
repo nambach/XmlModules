@@ -1,6 +1,6 @@
 package repository.impl;
 
-import model.RawBook;
+import entity.RawBook;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;

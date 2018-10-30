@@ -1,6 +1,7 @@
 package model;
 
 import crawler.CrawlerResultProcessor;
+import entity.RawBook;
 
 import java.util.List;
 import java.util.Map;
