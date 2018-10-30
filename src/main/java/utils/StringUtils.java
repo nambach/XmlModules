@@ -6,7 +6,7 @@ import java.util.List;
 
 public class StringUtils {
 
-    private static final String DELIMITER_REGEX = "[\\s(),.;]+";
+    private static final String DELIMITER_REGEX = "[\\s(),.;\\-]+";
 
     public static double calculateLCS(String sentence1, String sentence2, boolean...compare) {
         sentence1 = "pre " + sentence1;
@@ -56,8 +56,8 @@ public class StringUtils {
     }
 
     public static void main(String[] args) {
-        String a = "Sách Bài Tập Theo Phương Pháp Montessori - Phát Triển Trí Tuệ Và Khả Năng Toán Học Cho Trẻ";
-        String b = "Cấu Trúc Dữ Liệu Và Thuật Toán (Phân Tích Và Cài Đặt Trên C/C++) - Tập 2";
+        String a = "Tôi Là Nietzsche, Tôi Đến Đây Để Gặp Em!";
+        String b = "Triết Học Ơi, Mở Ra! - Tập 2: Tôi Là Tư Duy Như Thế Nào? Tôi Có Thể Làm Gì? Tôi Phải Đi Về Đâu?";
 
         double rs = calculateLCSubstring(a, b, true);
         System.out.println(rs);
@@ -68,8 +68,8 @@ public class StringUtils {
         sentence1 = "pre " + sentence1;
         sentence2 = "pre " + sentence2;
 
-        String[] S = sentence1.toLowerCase().trim().split(DELIMITER_REGEX);
-        String[] T = sentence2.toLowerCase().trim().split(DELIMITER_REGEX);
+        String[] S = sentence1.toLowerCase().trim().replace("tái bản", "").split(DELIMITER_REGEX);
+        String[] T = sentence2.toLowerCase().trim().replace("tái bản", "").split(DELIMITER_REGEX);
 
         int L[][] = new int[S.length][T.length];
         int z = 0;
@@ -100,7 +100,7 @@ public class StringUtils {
 
 //        System.out.println(ret.stream().collect(Collectors.joining(" ")));
 
-        double commonLength =  ret.size();
+        double commonLength =  z;
         double sampleLength = Math.min(S.length - 1, T.length - 1);
 
         // if the gap of number of words is relatively large, then they must be 2 different words
@@ -110,6 +110,9 @@ public class StringUtils {
         }
 
         if (compare.length > 0 && compare[0]) {
+            if (commonLength >= 5) {
+                return 1;
+            }
             return commonLength / sampleLength;
         } else {
             return commonLength;
