@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns="http://nambm.io/bookList"
-       xsi:schemaLocation="http://nambm.io/bookList ./crawlRules/bookList.xsd">
+<books>
     <book>
         <authors>Matsuda Michio</authors>
         <id>NSV_6198</id>
@@ -11,7 +9,7 @@
         <price>210.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Combo Bách khoa toàn thư nuôi</title>
+        <title>Combo Bách khoa toàn thư nuôi dạy trẻ - Bộ 3 tập</title>
     </book>
     <book>
         <authors>Tony Buổi Sáng</authors>
@@ -22,7 +20,7 @@
         <price>76.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Cà phê cùng Tony - Tái bản</title>
+        <title>Cà phê cùng Tony - Tái bản 2017</title>
     </book>
     <book>
         <authors>Seith M. Siegel</authors>
@@ -44,7 +42,7 @@
         <price>220.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Combo Phát triển tư duy cho</title>
+        <title>Combo Phát triển tư duy cho học sinh tiểu học (Bộ 4 Cuốn)</title>
     </book>
     <book>
         <authors>Glenn Doman,</authors>
@@ -55,7 +53,7 @@
         <price>261.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Dot card Dạy Trẻ Học Toán Tập</title>
+        <title>Dot card Dạy Trẻ Học Toán Tập 2</title>
     </book>
     <book>
         <authors>Carlo Collodi</authors>
@@ -66,7 +64,7 @@
         <price>108.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Những cuộc phưu lưu của</title>
+        <title>Những cuộc phưu lưu của Pinocchio</title>
     </book>
     <book>
         <authors>Trương Yến</authors>
@@ -77,7 +75,7 @@
         <price>238.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Combo Mã vân giày vải - Triết</title>
+        <title>Combo Mã vân giày vải - Triết lý sống của tôi</title>
     </book>
     <book>
         <authors>Terry Chew</authors>
@@ -88,7 +86,7 @@
         <price>1.164.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Combo đánh thức tài năng toán</title>
+        <title>Combo đánh thức tài năng toán học ( Trọn bộ 05 cuốn )</title>
     </book>
     <book>
         <authors>Alexander Dumas</authors>
@@ -121,7 +119,7 @@
         <price>118.150đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Hành Trình Biến Thương Hiệu</title>
+        <title>Hành Trình Biến Thương Hiệu Thành Biểu Tượng</title>
     </book>
     <book>
         <authors>Thảo xù</authors>
@@ -132,7 +130,7 @@
         <price>66.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Chỉ Cần Một Người Hiểu Em</title>
+        <title>Chỉ Cần Một Người Hiểu Em Trong Đời</title>
     </book>
     <book>
         <authors>Brad Stone</authors>
@@ -154,7 +152,7 @@
         <price>191.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>I Love Cookbook - Nắng thảo</title>
+        <title>I Love Cookbook - Nắng thảo mộc</title>
     </book>
     <book>
         <authors>Frances Hodgson</authors>
@@ -176,7 +174,7 @@
         <price>421.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Bộ Vua Bán Lẻ (Gồm 3 Cuốn :</title>
+        <title>Bộ Vua Bán Lẻ (Gồm 3 Cuốn : Sam Walton Cuộc Đời Kinh Doanh Tại Mỹ; Marketing Cho Bán Lẻ; Vua Bán Lẻ + 1CD)</title>
     </book>
     <book>
         <authors>Tờ Pi</authors>
@@ -209,7 +207,7 @@
         <price>59.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Quá trẻ để chết - hành trình</title>
+        <title>Quá trẻ để chết - hành trình nước Mỹ</title>
     </book>
     <book>
         <authors>Shin Yee Jin</authors>
@@ -253,7 +251,7 @@
         <price>55.800đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Âm nhạc thai giáo - Càng nghe</title>
+        <title>Âm nhạc thai giáo - Càng nghe càng thông minh ( Tặng kèm VCD)</title>
     </book>
     <book>
         <authors>Kassandra</authors>
@@ -297,7 +295,7 @@
         <price>127.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Phát triển IQ cho bé ( Từ 3 -</title>
+        <title>Phát triển IQ cho bé ( Từ 3 - 6 tuổi ) bộ 06 cuốn</title>
     </book>
     <book>
         <authors>Nhiều Tác giả</authors>
@@ -308,7 +306,7 @@
         <price>135.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Phát triển IQ cho trẻ em ( Bộ</title>
+        <title>Phát triển IQ cho trẻ em ( Bộ 06 cuốn )</title>
     </book>
     <book>
         <authors>Robin</authors>
@@ -330,7 +328,7 @@
         <price>118.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Tứ thư lãnh đạo - Thuật dụng</title>
+        <title>Tứ thư lãnh đạo - Thuật dụng ngôn</title>
     </book>
     <book>
         <authors>Quỳnh Thy</authors>
@@ -352,7 +350,7 @@
         <price>280đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Living History - Hồi Ký</title>
+        <title>Living History - Hồi Ký Hillary Clinton Và Chính Trường Nước Mỹ (Tái Bản 2014)</title>
     </book>
     <book>
         <authors>Harlan Coben</authors>
@@ -374,7 +372,7 @@
         <price>88.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Cô thợ bánh và chàng người mẫu</title>
+        <title>Cô thợ bánh và chàng người mẫu - Sách tặng kèm chữ ký tác giả</title>
     </book>
     <book>
         <authors>Nguyễn Bình</authors>
@@ -396,7 +394,7 @@
         <price>156.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Sự thật về vụ án Harry Quebert</title>
+        <title>Sự thật về vụ án Harry Quebert hay chuyện nàng Nola</title>
     </book>
     <book>
         <authors>Thành Phong -</authors>
@@ -407,7 +405,7 @@
         <price>699.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Long thần tướng - Bản đặc biệt</title>
+        <title>Long thần tướng - Bản đặc biệt ( Tặng kèm chữ ký tác giả )</title>
     </book>
     <book>
         <authors>Thành Phong -</authors>
@@ -418,7 +416,7 @@
         <price>169.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Long thần tướng - Bản cao cấp</title>
+        <title>Long thần tướng - Bản cao cấp ( Tặng kèm chữ ký tác giả )</title>
     </book>
     <book>
         <authors>Thành Phong -</authors>
@@ -429,7 +427,7 @@
         <price>55.200đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Long thần tướng - bản phổ</title>
+        <title>Long thần tướng - bản phổ thông ( Tặng kèm chữ ký tác giả )</title>
     </book>
     <book>
         <authors>Quỳnh Scarlett</authors>
@@ -484,7 +482,7 @@
         <price>71.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Nuôi con không phải là cuộc</title>
+        <title>Nuôi con không phải là cuộc chiến</title>
     </book>
     <book>
         <authors>Nguyễn Bảo</authors>
@@ -550,7 +548,7 @@
         <price>45.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Dạy trẻ biết vâng lời &amp; lắng</title>
+        <title>Dạy trẻ biết vâng lời &amp; lắng nghe trẻ nói</title>
     </book>
     <book>
         <authors>Cartherine</authors>
@@ -572,7 +570,7 @@
         <price>79.200đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>40 tuần thực hành thai giáo -</title>
+        <title>40 tuần thực hành thai giáo - 12 tháng thắp sáng thiên tài</title>
     </book>
     <book>
         <authors>Phương Thùy</authors>
@@ -583,7 +581,7 @@
         <price>22.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Để con vâng lời mà không nổi</title>
+        <title>Để con vâng lời mà không nổi cáu</title>
     </book>
     <book>
         <authors>Thư Đức Sơ</authors>
@@ -594,7 +592,7 @@
         <price>37.800đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Phương pháp học tốt hơn trường</title>
+        <title>Phương pháp học tốt hơn trường học tốt</title>
     </book>
     <book>
         <authors>Tôn Thụy Tuyết</authors>
@@ -605,7 +603,7 @@
         <price>80.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Yêu Thương Và Tự Do ( Tái Bản</title>
+        <title>Yêu Thương Và Tự Do ( Tái Bản 2015)</title>
     </book>
     <book>
         <authors>Tiểu Mạch</authors>
@@ -616,7 +614,7 @@
         <price>50.400đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Phương Pháp Giáo Dục Dành Cho</title>
+        <title>Phương Pháp Giáo Dục Dành Cho Trẻ Nhút Nhát</title>
     </book>
     <book>
         <authors>Vương Ba, Vương</authors>
@@ -638,7 +636,7 @@
         <price>67.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Những Quy Tắc Để Con Có Cuộc</title>
+        <title>Những Quy Tắc Để Con Có Cuộc Sống Hạnh Phúc</title>
     </book>
     <book>
         <authors>First News</authors>
@@ -660,7 +658,7 @@
         <price>80.100đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Thai Giáo - Hành Trình Của</title>
+        <title>Thai Giáo - Hành Trình Của Yêu Thương (Tặng Kèm CD)</title>
     </book>
     <book>
         <authors>Phùng Đức Toàn</authors>
@@ -671,7 +669,7 @@
         <price>211.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Bộ Sách: Phương Án 0 Tuổi (Bộ</title>
+        <title>Bộ Sách: Phương Án 0 Tuổi (Bộ 3 Cuốn)</title>
     </book>
     <book>
         <authors>Dr Miriam</authors>
@@ -704,7 +702,7 @@
         <price>289.800đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Combo Cẩm nang chăm sóc me và</title>
+        <title>Combo Cẩm nang chăm sóc me và bé ( trọn bộ 4 cuốn )</title>
     </book>
     <book>
         <authors>VƯơng Nghệ Lâm</authors>
@@ -737,7 +735,7 @@
         <price>21.600đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Phát Triển Trí Tuệ Cho Trẻ Nhỏ</title>
+        <title>Phát Triển Trí Tuệ Cho Trẻ Nhỏ - Tủ Sách Mẹ Dạy Con Học (Từ 4 Đến 5 Tuổi)</title>
     </book>
     <book>
         <authors>Ellen Galinsky</authors>
@@ -759,7 +757,7 @@
         <price>30.600đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Chăm sóc &amp; nuôi con đúng cách</title>
+        <title>Chăm sóc &amp; nuôi con đúng cách từ sơ sinh đến 6 tháng tuổi</title>
     </book>
     <book>
         <authors>Quốc Tú Hoa</authors>
@@ -770,7 +768,7 @@
         <price>67.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Cẩm Nang Nuôi Dạy Con Theo</title>
+        <title>Cẩm Nang Nuôi Dạy Con Theo Phương Pháp Montessori</title>
     </book>
     <book>
         <authors>Tracey Murkett,</authors>
@@ -803,7 +801,7 @@
         <price>58.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>7 thói quen để trẻ trưởng</title>
+        <title>7 thói quen để trẻ trưởng thành</title>
     </book>
     <book>
         <authors>Nguyễn Thị Ngọc</authors>
@@ -825,7 +823,7 @@
         <price>90.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>My first book - Nhật ký đầu</title>
+        <title>My first book - Nhật ký đầu đời của bé</title>
     </book>
     <book>
         <authors>Mai Hà Uyên</authors>
@@ -880,7 +878,7 @@
         <price>26.100đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Phòng &amp; Chữa Bệnh Bằng</title>
+        <title>Phòng &amp; Chữa Bệnh Bằng Món Ăn Hàng Ngày</title>
     </book>
     <book>
         <authors>Trương kiến lệ</authors>
@@ -891,7 +889,7 @@
         <price>19.800đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Bố Mẹ Không Nên Nói Gì Với Con</title>
+        <title>Bố Mẹ Không Nên Nói Gì Với Con Cái</title>
     </book>
     <book>
         <authors>Nhiều Tác giả</authors>
@@ -902,7 +900,7 @@
         <price>53.100đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Mỗi Đứa Trẻ Đều Có Thể Học Các</title>
+        <title>Mỗi Đứa Trẻ Đều Có Thể Học Các Quy Tắc</title>
     </book>
     <book>
         <authors>Ibuka Masaru</authors>
@@ -913,7 +911,7 @@
         <price>62.100đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Chiến Lược Của Mẹ Thay Đổi</title>
+        <title>Chiến Lược Của Mẹ Thay Đổi Cuộc Đời Con</title>
     </book>
     <book>
         <authors>Shichida</authors>
@@ -924,7 +922,7 @@
         <price>61.900đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Cha Mẹ Nhật Nuôi Dạy Con</title>
+        <title>Cha Mẹ Nhật Nuôi Dạy Con Như Thế Nào - Tập 2: 70 Thói Quen Nuôi Dạy Trẻ Thành Tài</title>
     </book>
     <book>
         <authors>Shichida</authors>
@@ -935,7 +933,7 @@
         <price>62.100đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Cha Mẹ Nhật Nuôi Dạy Con</title>
+        <title>Cha Mẹ Nhật Nuôi Dạy Con Như Thế Nào - Tập 3: Phát Triển Tài Năng Và Trí Lực Con Trẻ</title>
     </book>
     <book>
         <authors>Nhiều Tác giả</authors>
@@ -946,7 +944,7 @@
         <price>34.200đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Giúp Bé Tránh Hiểm Nguy - Chăm</title>
+        <title>Giúp Bé Tránh Hiểm Nguy - Chăm Sóc Bé Hằng Ngày</title>
     </book>
     <book>
         <authors>Kẩm Nhung</authors>
@@ -968,7 +966,7 @@
         <price>81.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Biết tất tật chuyện trong</title>
+        <title>Biết tất tật chuyện trong thiên hạ</title>
     </book>
     <book>
         <authors>Sơn Paris</authors>
@@ -1012,7 +1010,7 @@
         <price>327.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Thuốc biệt dược và cách sử</title>
+        <title>Thuốc biệt dược và cách sử dụng</title>
     </book>
     <book>
         <authors>Thomas</authors>
@@ -1089,7 +1087,7 @@
         <price>52.200đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Bí mật của những đại gia sinh</title>
+        <title>Bí mật của những đại gia sinh viên</title>
     </book>
     <book>
         <authors>Asbooks biên</authors>
@@ -1100,7 +1098,7 @@
         <price>49.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Dấu ấn 12 con giáp - Quyển 12:</title>
+        <title>Dấu ấn 12 con giáp - Quyển 12: HỢI - Vũ trụ mơ hồ</title>
     </book>
     <book>
         <authors>Asbooks biên</authors>
@@ -1111,7 +1109,7 @@
         <price>49.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Dấu ấn 12 con giáp - Quyển 11:</title>
+        <title>Dấu ấn 12 con giáp - Quyển 11: TUẤT - Thế giới cân bằng</title>
     </book>
     <book>
         <authors>Asbooks biên</authors>
@@ -1122,7 +1120,7 @@
         <price>49.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Dấu ấn 12 con giáp - Quyển 10:</title>
+        <title>Dấu ấn 12 con giáp - Quyển 10: DẬU - Cá tính kì quặc</title>
     </book>
     <book>
         <authors>Asbooks biên</authors>
@@ -1133,7 +1131,7 @@
         <price>49.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Dấu ấn 12 con giáp - Quyển 9:</title>
+        <title>Dấu ấn 12 con giáp - Quyển 9: THÂN - Cái Tôi dễ chịu</title>
     </book>
     <book>
         <authors>Asbooks biên</authors>
@@ -1144,7 +1142,7 @@
         <price>49.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Dấu ấn 12 con giáp - Quyển 8:</title>
+        <title>Dấu ấn 12 con giáp - Quyển 8: MÙI - Lạc quan hay Bất an</title>
     </book>
     <book>
         <authors>Asbooks biên</authors>
@@ -1155,7 +1153,7 @@
         <price>49.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Dấu ấn 12 con giáp - Quyển 7:</title>
+        <title>Dấu ấn 12 con giáp - Quyển 7: NGỌ - Cuồng chân thích chạy</title>
     </book>
     <book>
         <authors>Asbooks biên</authors>
@@ -1166,7 +1164,7 @@
         <price>49.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Dấu ấn 12 con giáp - Quyển 6:</title>
+        <title>Dấu ấn 12 con giáp - Quyển 6: TỴ - Hành trình bí ẩn</title>
     </book>
     <book>
         <authors>Asbooks biên</authors>
@@ -1177,7 +1175,7 @@
         <price>49.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Dấu ấn 12 con giáp - Quyển 5:</title>
+        <title>Dấu ấn 12 con giáp - Quyển 5: THÌN - Bản thân là số Một</title>
     </book>
     <book>
         <authors>Asbooks biên</authors>
@@ -1188,7 +1186,7 @@
         <price>49.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Dấu ấn 12 con giáp - Quyển 4:</title>
+        <title>Dấu ấn 12 con giáp - Quyển 4: MÃO – Hòa bình là không trốn tránh</title>
     </book>
     <book>
         <authors>Asbooks biên</authors>
@@ -1199,7 +1197,7 @@
         <price>49.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Dấu ấn 12 con giáp - Tý - Bản</title>
+        <title>Dấu ấn 12 con giáp - Tý - Bản lĩnh dẫn đầu</title>
     </book>
     <book>
         <authors>Asbooks biên</authors>
@@ -1210,7 +1208,7 @@
         <price>594.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Dấu ấn 12 con giáp(Trọn bộ 12</title>
+        <title>Dấu ấn 12 con giáp(Trọn bộ 12 cuốn)</title>
     </book>
     <book>
         <authors>Nhiều Tác giả</authors>
@@ -1221,7 +1219,7 @@
         <price>25.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Ngày mai tớ sẽ yêu cậu nhiều</title>
+        <title>Ngày mai tớ sẽ yêu cậu nhiều hơn hôm nay</title>
     </book>
     <book>
         <authors>Nhiều Tác giả</authors>
@@ -1298,7 +1296,7 @@
         <price>144.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Mật mã da vinci ( ấn phẩm mới</title>
+        <title>Mật mã da vinci ( ấn phẩm mới )</title>
     </book>
     <book>
         <authors>Aoyama Gosho</authors>
@@ -1309,7 +1307,7 @@
         <price>16.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Thám tử lừng danh conan - Tập</title>
+        <title>Thám tử lừng danh conan - Tập 79</title>
     </book>
     <book>
         <authors>Rachel Vincent</authors>
@@ -1320,7 +1318,7 @@
         <price>55.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Soul Screamers (Nữ Thần Báo</title>
+        <title>Soul Screamers (Nữ Thần Báo Tử) - Tập 3: Hơi thở của quỷ</title>
     </book>
     <book>
         <authors>Rachel Vincent</authors>
@@ -1331,7 +1329,7 @@
         <price>45.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Soul Screamers (Nữ Thần Báo</title>
+        <title>Soul Screamers (Nữ Thần Báo Tử) - Tập 2: Cứu dỗi</title>
     </book>
     <book>
         <authors>Rachel Vincent</authors>
@@ -1342,7 +1340,7 @@
         <price>50.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Soul Screamers (Nữ Thần Báo</title>
+        <title>Soul Screamers (Nữ Thần Báo Tử) - Tập 1</title>
     </book>
     <book>
         <authors>Antoine de</authors>
@@ -1353,7 +1351,7 @@
         <price>620.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Đại tướng võ nguyên giáp tổng</title>
+        <title>Đại tướng võ nguyên giáp tổng tập hồi ký</title>
     </book>
     <book>
         <authors>Dale Carnegie</authors>
@@ -1408,7 +1406,7 @@
         <price>49.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Soul Screamers (Nữ Thần Báo</title>
+        <title>Soul Screamers (Nữ Thần Báo Tử) - Tập 7</title>
     </book>
     <book>
         <authors>Lưu Quang Vũ</authors>
@@ -1430,7 +1428,7 @@
         <price>28.800đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Phát triển trí lực cho trẻ từ</title>
+        <title>Phát triển trí lực cho trẻ từ 16 - 36 tháng tuổi</title>
     </book>
     <book>
         <authors>Việt Văn Book</authors>
@@ -1452,7 +1450,7 @@
         <price>54.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Con gái, ba có nhiều điều muốn</title>
+        <title>Con gái, ba có nhiều điều muốn nói với con</title>
     </book>
     <book>
         <authors>Thế Anh</authors>
@@ -1496,7 +1494,7 @@
         <price>39.100đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Hướng dẫn viết đúng ngữ pháp</title>
+        <title>Hướng dẫn viết đúng ngữ pháp Tiếng Anh</title>
     </book>
     <book>
         <authors>Steven Green</authors>
@@ -1507,7 +1505,7 @@
         <price>32.400đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Luyện đọc Tiếng Anh cho học</title>
+        <title>Luyện đọc Tiếng Anh cho học sinh tiểu học - Thực hành (Kèm CD)</title>
     </book>
     <book>
         <authors>Lê Vân</authors>
@@ -1518,7 +1516,7 @@
         <price>22.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Mỗi ngày một bài học từ vựng</title>
+        <title>Mỗi ngày một bài học từ vựng Tiếng Anh -  Đọc hiểu, nâng vốn từ</title>
     </book>
     <book>
         <authors>Việt Anh</authors>
@@ -1540,7 +1538,7 @@
         <price>34.200đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Phát âm chuẩn Tiếng Anh cho bé</title>
+        <title>Phát âm chuẩn Tiếng Anh cho bé - Kèm CD</title>
     </book>
     <book>
         <authors>Nguyễn Ngọc Ký</authors>
@@ -1573,7 +1571,7 @@
         <price>52.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>New English file elementary</title>
+        <title>New English file elementary students book</title>
     </book>
     <book>
         <authors>Robert T</authors>
@@ -1595,7 +1593,7 @@
         <price>84.150đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Donald Trump - Chiến lược đầu</title>
+        <title>Donald Trump - Chiến lược đầu tư bất động sản</title>
     </book>
     <book>
         <authors>Phan Lan</authors>
@@ -1606,7 +1604,7 @@
         <price>52.200đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Nghệ thuật kinh doanh chứng</title>
+        <title>Nghệ thuật kinh doanh chứng khoán</title>
     </book>
     <book>
         <authors>Valerijus</authors>
@@ -1617,7 +1615,7 @@
         <price>135.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Forex 101 - Mọi điều cần biết</title>
+        <title>Forex 101 - Mọi điều cần biết về thị trường ngoại hối</title>
     </book>
     <book>
         <authors>Macxin Gorki</authors>
@@ -1639,7 +1637,7 @@
         <price>36.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Muốn thành công xin đừng viện</title>
+        <title>Muốn thành công xin đừng viện cớ</title>
     </book>
     <book>
         <authors>Mèo Lười Ngủ</authors>
@@ -1650,7 +1648,7 @@
         <price>116.100đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Nhật ký thăng chức của thổ</title>
+        <title>Nhật ký thăng chức của thổ thần</title>
     </book>
     <book>
         <authors>Richard Templar</authors>
@@ -1672,7 +1670,7 @@
         <price>45.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>28 cách để trở thành người phụ</title>
+        <title>28 cách để trở thành người phụ nữ giàu có</title>
     </book>
     <book>
         <authors>Keith Cameron</authors>
@@ -1683,7 +1681,7 @@
         <price>44.100đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>10 điều khác biệt nhất giữa kẻ</title>
+        <title>10 điều khác biệt nhất giữa kẻ giàu và người nghèo</title>
     </book>
     <book>
         <authors>John GoGo</authors>
@@ -1727,7 +1725,7 @@
         <price>22.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Câu chuyện của lợn con tròn</title>
+        <title>Câu chuyện của lợn con tròn tròn</title>
     </book>
     <book>
         <authors>Ngọc Linh</authors>
@@ -1738,7 +1736,7 @@
         <price>40.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>IQ - Trò chơi bóc dán thông</title>
+        <title>IQ - Trò chơi bóc dán thông minh (Tập 2)</title>
     </book>
     <book>
         <authors>Trần Trường</authors>
@@ -1749,7 +1747,7 @@
         <price>72.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>100 truyện cổ tích Việt Nam</title>
+        <title>100 truyện cổ tích Việt Nam (Bìa cứng)</title>
     </book>
     <book>
         <authors>Huy Hoàng Book</authors>
@@ -1760,7 +1758,7 @@
         <price>32.400đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Ghép hình nhận biết chữ số 1-</title>
+        <title>Ghép hình nhận biết chữ số 1- 10</title>
     </book>
     <book>
         <authors>Chim Gõ Kiến</authors>
@@ -1804,7 +1802,7 @@
         <price>67.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Tranh ghép hình cho bé ( Bộ 5</title>
+        <title>Tranh ghép hình cho bé ( Bộ 5 Tranh )</title>
     </book>
     <book>
         <authors>Marco</authors>
@@ -1826,7 +1824,7 @@
         <price>93.500đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Ronaldo - Ám ảnh về sự hoàn</title>
+        <title>Ronaldo - Ám ảnh về sự hoàn hảo</title>
     </book>
     <book>
         <authors>Luca Caioli</authors>
@@ -1837,7 +1835,7 @@
         <price>102.000đ</price>
         <siteName>Nhà sách Việt</siteName>
         <status>true</status>
-        <title>Messi - Từ El Pulga đến một</title>
+        <title>Messi - Từ El Pulga đến một huyền thoại (Phát hành tháng 9/2012)</title>
     </book>
     <book>
         <authors>Nhiều Tác giả</authors>
