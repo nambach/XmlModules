@@ -76,7 +76,8 @@ public class ClassifyBook {
                     String hostTitle = suggestGroup.getTitle();
 
                     double similarRate = StringUtils.calculateLCS(hostTitle, guestTitle, true);
-                    if (similarRate >= 0.8) {
+                    double commonRate = StringUtils.calculateLCSubstring(hostTitle, guestTitle, true);
+                    if (similarRate >= 0.8 || commonRate >= 0.65) {
                         compareGroup.setSuggestGroupId(suggestGroup.getId());
                         suggestGroup.addMember(compareGroup.getId());
 
