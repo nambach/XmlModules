@@ -37,7 +37,7 @@ public class ClassifyBook {
                     String groupTitle = compareGroup.getTitle();
                     String bookTitle = book.getTitle();
 
-                    double similarRate = StringUtils.calculateLCS(bookTitle, groupTitle, true);
+                    double similarRate = StringUtils.calculateLCSubstring(bookTitle, groupTitle).calculateIdentity();
                     if (similarRate >= 0.8 && similarRate > candidateSimilarRate) {
                         candidateGroup = compareGroup;
                         candidateSimilarRate = similarRate;
@@ -75,9 +75,9 @@ public class ClassifyBook {
                     String guestTitle = compareGroup.getTitle();
                     String hostTitle = suggestGroup.getTitle();
 
-                    double similarRate = StringUtils.calculateLCS(hostTitle, guestTitle, true);
-                    double commonRate = StringUtils.calculateLCSubstring(hostTitle, guestTitle, true);
-                    if (similarRate >= 0.8 || commonRate >= 0.65) {
+                    double lcsSeqRate = StringUtils.calculateLCSubsequence(hostTitle, guestTitle).calculateSimilarity(6);
+                    double lcsStrRate = StringUtils.calculateLCSubstring(hostTitle, guestTitle).calculateSimilarity();
+                    if (lcsSeqRate >= 0.8 || lcsStrRate >= 0.7) {
                         compareGroup.setSuggestGroupId(suggestGroup.getId());
                         suggestGroup.addMember(compareGroup.getId());
 
