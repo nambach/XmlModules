@@ -1,6 +1,6 @@
 package repository;
 
-import model.RawBook;
+import entity.RawBook;
 import repository.generic.GenericRepository;
 
 import java.util.List;

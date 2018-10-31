@@ -1,5 +1,6 @@
-package model;
+package entity;
 
+import model.Book;
 import repository.generic.GenericEntity;
 
 import javax.persistence.Column;
@@ -43,6 +44,11 @@ public class RawBook implements GenericEntity {
     //Status
     @Column(name = "`status`")
     private String status;
+
+    @Column(name = "`compareGroupId`")
+    private String compareGroupId;
+    @Column(name = "`suggestGroupId`")
+    private String suggestGroupId;
 
     public RawBook() {
     }
@@ -129,6 +135,22 @@ public class RawBook implements GenericEntity {
 
     public void setSiteName(String siteName) {
         this.siteName = siteName;
+    }
+
+    public String getCompareGroupId() {
+        return compareGroupId;
+    }
+
+    public void setCompareGroupId(String compareGroupId) {
+        this.compareGroupId = compareGroupId;
+    }
+
+    public String getSuggestGroupId() {
+        return suggestGroupId;
+    }
+
+    public void setSuggestGroupId(String suggestGroupId) {
+        this.suggestGroupId = suggestGroupId;
     }
 
     @Override

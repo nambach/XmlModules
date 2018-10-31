@@ -16,7 +16,8 @@
 
         <property name="show_sql">true</property>
 
-        <mapping class="model.RawBook"/>
+        <mapping class="entity.RawBook"/>
+        <mapping class="entity.CompareGroup"/>
 
     </session-factory>
 </hibernate-configuration>
