@@ -142,6 +142,9 @@ public class CompareGroup implements GenericEntity {
         this.image = coreMember.getImage();
         this.minPrice = coreMember.getPrice();
         this.maxPrice = coreMember.getPrice();
+
+        //Remove authors name from title
+        this.title = this.title.replace(this.authors, "");
     }
 
     private void updatePrice(RawBook book) {
@@ -165,6 +168,9 @@ public class CompareGroup implements GenericEntity {
     public void updateBookInfo(RawBook book) {
         if (this.authors == null || authors.equals("")) {
             this.authors = book.getAuthors();
+
+            //Remove authors name from title
+            this.title = this.title.replace(this.authors, "");
         }
         if (this.image == null || authors.equals("")) {
             this.image = book.getImage();

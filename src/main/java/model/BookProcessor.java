@@ -2,6 +2,7 @@ package model;
 
 import crawler.CrawlerResultProcessor;
 import entity.RawBook;
+import repository.RawBookRepository;
 
 import java.util.List;
 import java.util.Map;
@@ -14,7 +15,13 @@ public class BookProcessor implements CrawlerResultProcessor {
 
     private BookList bookList;
 
+    private RawBookRepository rawBookRepository;
+
     public BookProcessor() {
+    }
+
+    public void setRawBookRepository(RawBookRepository rawBookRepository) {
+        this.rawBookRepository = rawBookRepository;
     }
 
     public void setProcessObject(boolean processObject) {
@@ -41,7 +48,8 @@ public class BookProcessor implements CrawlerResultProcessor {
 
     @Override
     public void processResultObject(Map<String, String> object) {
-        System.out.println(object);
+        //System.out.println(object);
+        rawBookRepository.insertOrReplace(RawBook.convert(object));
     }
 
     @Override

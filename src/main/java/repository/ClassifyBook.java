@@ -24,6 +24,8 @@ public class ClassifyBook {
         List<CompareGroup> compareGroups = compareGroupRepository.searchAll();
         List<SuggestGroup> suggestGroups = suggestGroupRepository.searchAll();
 
+        long start = System.currentTimeMillis();
+
         for (RawBook book : books) {
             if (book.getCompareGroupId() == null) {
                 boolean pass = false;
@@ -32,10 +34,15 @@ public class ClassifyBook {
                 double candidateSimilarRate = 0;
 
                 for (CompareGroup compareGroup : compareGroups) {
-                    if (compareGroup.checkMemberSource(book.getId())) break; // Two books of same source => then it must be two group!!
+                    if (compareGroup.checkMemberSource(book.getId())) continue; // Two books with same source can not be in a same group
 
                     String groupTitle = compareGroup.getTitle();
                     String bookTitle = book.getTitle();
+
+                    // Remove authors name in title (if any)
+                    if (compareGroup.getAuthors() != null && !compareGroup.getAuthors().equals("")) {
+                        bookTitle = bookTitle.replace(compareGroup.getAuthors(), "");
+                    }
 
                     double similarRate = StringUtils.calculateLCSubstring(bookTitle, groupTitle).calculateIdentity();
                     if (similarRate >= 0.8 && similarRate > candidateSimilarRate) {
@@ -135,6 +142,7 @@ public class ClassifyBook {
         System.out.println(suggestGroups.size());
         System.out.println(rs2.size());
 
+        System.out.println(System.currentTimeMillis() - start);
 
 //        for (Group group : groups) {
 //            groupRepository.insertOrReplace(group);

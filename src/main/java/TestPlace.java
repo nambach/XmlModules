@@ -1,6 +1,8 @@
 import crawler.Crawler;
 import model.Book;
 import model.BookProcessor;
+import repository.generic.impl.GenericRepositoryImpl;
+import repository.impl.RawBookRepositoryImpl;
 import utils.FileUtils;
 import utils.JAXBUtils;
 
@@ -13,6 +15,7 @@ public class TestPlace {
         BookProcessor bookProcessor = new BookProcessor();
         bookProcessor.setProcessObject(true);
         bookProcessor.setProcessList(true);
+        bookProcessor.setRawBookRepository(new RawBookRepositoryImpl(GenericRepositoryImpl.getFactory()));
 
         Crawler<BookProcessor> crawler = new Crawler<>(rulePath);
         crawler.setResultProcessor(bookProcessor);
