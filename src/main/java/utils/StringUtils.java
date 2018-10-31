@@ -8,6 +8,8 @@ public class StringUtils {
 
     private static final String DELIMITER_REGEX = "[\\s(),.;\\-]+";
 
+    private static final List<String> MISCELLANEOUS_WORDS = Arrays.asList("tái bản", "tặng kèm", "số lượng có hạn");
+
     public static double calculateLCS(String sentence1, String sentence2, boolean...compare) {
         sentence1 = "pre " + sentence1;
         sentence2 = "pre " + sentence2;
@@ -56,20 +58,28 @@ public class StringUtils {
     }
 
     public static void main(String[] args) {
-        String a = "Tôi Là Nietzsche, Tôi Đến Đây Để Gặp Em!";
-        String b = "Triết Học Ơi, Mở Ra! - Tập 2: Tôi Là Tư Duy Như Thế Nào? Tôi Có Thể Làm Gì? Tôi Phải Đi Về Đâu?";
+        String a = "School 2013 - Nơi Này Là Thanh Xuân (Bộ 2 Tập) (Tặng Kèm Postcard - Số Lượng Có Hạn)";
+        String b = "Hành Trình Đến Gần Thần Tượng EXO (Tặng Kèm Dây Chuyền - Số Lượng Có Hạn)";
 
         double rs = calculateLCSubstring(a, b, true);
         System.out.println(rs);
     }
 
+    private static String preProcessString(String s) {
+        s = s.trim().toLowerCase();
+        for (String miscellaneousWord : MISCELLANEOUS_WORDS) {
+            s = s.replace(miscellaneousWord, "");
+        }
+        return s;
+    }
+
     //https://en.wikipedia.org/wiki/Longest_common_substring_problem
     public static double calculateLCSubstring(String sentence1, String sentence2, boolean...compare) {
-        sentence1 = "pre " + sentence1;
-        sentence2 = "pre " + sentence2;
+        sentence1 = "pre " + preProcessString(sentence1);
+        sentence2 = "pre " + preProcessString(sentence2);
 
-        String[] S = sentence1.toLowerCase().trim().replace("tái bản", "").split(DELIMITER_REGEX);
-        String[] T = sentence2.toLowerCase().trim().replace("tái bản", "").split(DELIMITER_REGEX);
+        String[] S = sentence1.split(DELIMITER_REGEX);
+        String[] T = sentence2.split(DELIMITER_REGEX);
 
         int L[][] = new int[S.length][T.length];
         int z = 0;
@@ -110,7 +120,7 @@ public class StringUtils {
         }
 
         if (compare.length > 0 && compare[0]) {
-            if (commonLength >= 5) {
+            if (commonLength >= 4) {
                 return 1;
             }
             return commonLength / sampleLength;
