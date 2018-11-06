@@ -9,8 +9,9 @@ import repository.impl.RawBookRepositoryImpl;
 import repository.impl.SuggestGroupRepositoryImpl;
 import utils.StringUtils;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ClassifyBook {
 
@@ -19,15 +20,17 @@ public class ClassifyBook {
         SuggestGroupRepository suggestGroupRepository = new SuggestGroupRepositoryImpl(GenericRepositoryImpl.getFactory());
         RawBookRepository bookRepository = new RawBookRepositoryImpl(GenericRepositoryImpl.getFactory());
 
-        List<RawBook> books = bookRepository.searchAll();
+        List<RawBook> books = bookRepository.searchExactColumn(Collections.singletonList("true"), "status");
 
-        List<CompareGroup> compareGroups = compareGroupRepository.searchAll();
-        List<SuggestGroup> suggestGroups = suggestGroupRepository.searchAll();
+        List<CompareGroup> compareGroups = new ArrayList<>();
+        List<SuggestGroup> suggestGroups = new ArrayList<>();
+
+        compareGroupRepository.clearData();
+        suggestGroupRepository.clearData();
 
         long start = System.currentTimeMillis();
 
         for (RawBook book : books) {
-            if (book.getCompareGroupId() == null) {
                 boolean pass = false;
 
                 CompareGroup candidateGroup = null;
@@ -70,8 +73,11 @@ public class ClassifyBook {
 
                     compareGroups.add(newGroup);
                 }
-            }
         }
+
+        System.out.println("Compares: " + compareGroups.size());
+
+//        compareGroupRepository.insertBatch(compareGroups);
 
         for (CompareGroup compareGroup : compareGroups) {
             if (compareGroup.getSuggestGroupId() == null) {
@@ -107,49 +113,44 @@ public class ClassifyBook {
             }
         }
 
-        System.out.println();
+        suggestGroupRepository.insertBatch(suggestGroups);
+        compareGroupRepository.insertBatch(compareGroups);
 
-        List<CompareGroup> rs = compareGroups.stream().filter(group -> group.countMembers() > 1).collect(Collectors.toList());
-
-        for (CompareGroup group : rs) {
-            System.out.println(group);
-            List<RawBook> group1 = books.stream().filter(rawBook -> rawBook.getCompareGroupId().equals(group.getId())).collect(Collectors.toList());
-
-            for (RawBook rawBook : group1) {
-                System.out.println(rawBook);
-            }
-            System.out.println();
-        }
+//        System.out.println();
+//
+//        List<CompareGroup> rs = compareGroups.stream().filter(group -> group.countMembers() > 1).collect(Collectors.toList());
+//
+//        for (CompareGroup group : rs) {
+//            System.out.println(group);
+//            List<RawBook> group1 = books.stream().filter(rawBook -> rawBook.getCompareGroupId().equals(group.getId())).collect(Collectors.toList());
+//
+//            for (RawBook rawBook : group1) {
+//                System.out.println(rawBook);
+//            }
+//            System.out.println();
+//        }
 
         System.out.println(books.size());
-        System.out.println(compareGroups.size());
-        System.out.println(rs.size());
+//        System.out.println(compareGroups.size());
+//        System.out.println(rs.size());
 
-        List<SuggestGroup> rs2 = suggestGroups.stream().filter(group -> group.countMembers() > 1).collect(Collectors.toList());
+//        List<SuggestGroup> rs2 = suggestGroups.stream().filter(group -> group.countMembers() > 1).collect(Collectors.toList());
 
-        for (SuggestGroup group : rs2) {
-            System.out.println(group);
-
-            List<CompareGroup> group1 = compareGroups.stream().filter(compareGroup -> compareGroup.getSuggestGroupId().equals(group.getId())).collect(Collectors.toList());
-
-            for (CompareGroup rawBook : group1) {
-                System.out.println(rawBook);
-            }
-            System.out.println();
-        }
+//        for (SuggestGroup group : rs2) {
+//            System.out.println(group);
+//
+//            List<CompareGroup> group1 = compareGroups.stream().filter(compareGroup -> compareGroup.getSuggestGroupId().equals(group.getId())).collect(Collectors.toList());
+//
+//            for (CompareGroup rawBook : group1) {
+//                System.out.println(rawBook);
+//            }
+//            System.out.println();
+//        }
 
         System.out.println(compareGroups.size());
         System.out.println(suggestGroups.size());
-        System.out.println(rs2.size());
+//        System.out.println(rs2.size());
 
         System.out.println(System.currentTimeMillis() - start);
-
-//        for (Group group : groups) {
-//            groupRepository.insertOrReplace(group);
-//        }
-//
-//        for (RawBook rawBook : books) {
-//            bookRepository.insertOrReplace(rawBook);
-//        }
     }
 }
