@@ -140,7 +140,8 @@ public class Crawler<T extends CrawlerResultProcessor> {
 
                         for (ItemDetail detailXPath : itemRule.getDetailXpath()) {
                             String name = detailXPath.getDetailName();
-                            String value = DomUtils.evaluateNode(item, detailXPath.getValue(), String.class);
+                            String xpathValue = detailXPath.getValue();
+                            String value = evaluateNode(item, xpathValue);
 
                             if (detailXPath.isIsRequired()) {
                                 if (value != null && value.trim().equals("")) {
@@ -150,7 +151,10 @@ public class Crawler<T extends CrawlerResultProcessor> {
 
                             value = detailXPath.getPrefix() + value + detailXPath.getPostfix();
 
-                            obj.put(name, value);
+                            // replace old value only if it doesn't exist yet
+                            if (obj.getOrDefault(name, "").trim().equals("")) {
+                                obj.put(name, value);
+                            }
                         }//End one item
 
                         results.add(obj);
@@ -171,6 +175,31 @@ public class Crawler<T extends CrawlerResultProcessor> {
         //System.out.println(results.size());
         if (resultProcessor != null && resultProcessor.isNeededToProcessList()) {
             resultProcessor.processResultList(results);
+        }
+    }
+
+    /**
+     * Enable crawler to evaluate the whole text contain inside a mixed node
+     *
+     * eg: <a>Hello <span>world</span> !</a>
+     * With this document, we use the query XPath as 'string(a)', it would return "Hello world !"
+     * To annotate this query in our .xml file, put it as syntax: <detailXpath>a::string()</detailXpath>
+     *
+     * @param node       target node
+     * @param xpathValue value of the node <detailXpath/>
+     * @return
+     * reference: https://stackoverflow.com/questions/10424117/xpath-expression-for-selecting-all-text-in-a-given-node-and-the-text-of-its-chl
+     */
+    private String evaluateNode(Node node, String xpathValue) {
+        String[] arr = xpathValue.split("::");
+        String xpathQuery = arr[0];
+
+        if (arr.length == 1) {
+            return DomUtils.evaluateNode(node, xpathQuery, String.class);
+        } else {
+            String xpathFunction = arr[1];
+            Node subNode = DomUtils.evaluateNode(node, xpathQuery, Node.class);
+            return DomUtils.evaluateNode(subNode, xpathFunction, String.class);
         }
     }
 }

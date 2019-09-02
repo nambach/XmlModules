@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://nambm.io/crawling-rule"
+       xsi:schemaLocation="http://nambm.io/crawling-rule crawling.xsd">
+    <rule>
+        <siteName>Tin mung</siteName>
+        <basedUrl>http://www.tinmung.net/CACTHANH/DanhChoBanTre/DanhSach.htm</basedUrl>
+        <topics>
+            <topic>
+                <topicName>Saint Name</topicName>
+                <topicCode>saintName</topicCode>
+                <url>http://www.tinmung.net/CACTHANH/DanhChoBanTre/DanhSach.htm</url>
+                <fragmentXpath>//table</fragmentXpath>
+            </topic>
+        </topics>
+        <collectionXpath>*//p[contains(@class, "MsoNormal")]</collectionXpath>
+        <item>
+            <detailXpath isRequired="true" detailName="saintName">b//a::string()</detailXpath>
+            <detailXpath detailName="saintDate">span/i::string()</detailXpath>
+            <detailXpath detailName="saintDate">i/span::string()</detailXpath>
+        </item>
+    </rule>
+</rules>

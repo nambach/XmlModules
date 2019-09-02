@@ -40,6 +40,12 @@ public class DomUtils {
 
         String title = evaluateNode(document, "//title/text()", String.class);
         System.out.println(title);
+
+        src="<a>Hello<span> </span>World</a>";
+        document = parseStringIntoDOM(src);
+
+        title = evaluateNode(document, "string()", String.class);
+        System.out.println(title);
     }
 
     public static Document parseFileToDom(String filePath) {
